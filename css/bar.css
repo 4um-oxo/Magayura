@@ -183,6 +183,7 @@ h3 {
 }
 
 .consignment_p > span {
+    font-size: 2rem;
     color: #526AB2;
 }
 
@@ -190,4 +191,36 @@ h3 {
 /* 
     シフト表
 */
+
+.menber_list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.menber_item img {
+    border-radius: 5px;
+}
+
+.menber_item > .menberImg_wrapper {
+    background-color: #FFF3E7;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.menber_item p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.menu_item > p > span {
+    float: right;
+}
+
+.menu_item {
+    margin-bottom: 30px;
+}
 
