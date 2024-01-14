@@ -73,7 +73,13 @@ nav > ul > li {
     color: #526AB2;
 }
 
-/* ここからメインコンテンツ */
+/* 
+--------------ここからメインコンテンツ-------------
+ */
+
+/* 親要素の幅指定 */
+
+
 
 
 /* 偶数コンテンツの背景 */
@@ -93,6 +99,7 @@ section {
 h3 {
     font-size: 30px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 #menu , #shift , #gallery {
@@ -103,35 +110,30 @@ h3 {
     color: #DA7D7D;
 }
 
+/* 
 
-/* お問い合わせの背景 */
+--------------ここからメニュー----------
 
 
-/* メニュー */
-
-/* 画像の並び */
+画像の並び */
 
 .menu_list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     list-style: none;
+    margin-bottom: 50px;
 }
 
 .menu_item {
-    margin: 30px;
+    width: calc(33.333% - 20px); /* 20pxはmarginの合計 */
+    margin: 15px;
 }
 
-.menu_item p {
-    margin-top: 10px;
-    font-size: 1.8rem;
+.menu_list ul {
+    width: 1000px;
 }
 
-.menu_item p span {
-    float: right; /* または text-align: right; */
-}
-
-
+/* 画像の装飾 */
 
 .menu_item img {
     border-radius: 5px;
@@ -143,16 +145,67 @@ h3 {
     border-radius: 10px;
 }
 
+
+/* 商品名　値段のスタイル */
+
+.menu_item p {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    text-align: left; /* テキストは左寄せに保つ */
+}
+
+.menu_item span {
+    float: right; /* 右寄せ */
+}
+
+
+/* 営業時間 */
+
+.opening_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.opening {
+    background-color: #FFF3E7;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 20px 40px;
+    border-radius: 20px;
+    width: 304px;
+}
+
+
+.opening h4 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #526AB2;
+    text-align: center;
+    padding: 5px;
+}
+
+.opening p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #DA7D7D;
+    text-align: center;
+}
+
 /* button */
 
-button{
+button {
+    display: flex;
+    justify-content: center;
+}
+
+.view {
     font-size: 20px;
     background-color: #526AB2;
     padding: 10px 60px;
     border-radius: 50px;
+    color: #DFEEFF;
 }
-
-
 
 /* 委託販売 */
 
