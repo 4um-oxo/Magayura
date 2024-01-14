@@ -115,97 +115,79 @@ h3 {
 --------------ここからメニュー----------
 
 
-画像の並び */
+画像の並び ・　画像装飾
+
+ */
 
 .menu_list {
     display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-bottom: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-
-.menu_item {
-    width: calc(33.333% - 20px); /* 20pxはmarginの合計 */
-    margin: 15px;
-}
-
-.menu_list ul {
-    width: 1000px;
-}
-
-/* 画像の装飾 */
 
 .menu_item img {
     border-radius: 5px;
 }
 
-.photo260_bg_odd {
+.menu_item > .menuitemImg_wrapper {
     background-color: #FFF3E7;
-    padding: 10px;
     border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
-
-
-/* 商品名　値段のスタイル */
 
 .menu_item p {
-    margin-top: 10px;
-    font-size: 1.8rem;
-    text-align: left; /* テキストは左寄せに保つ */
+    font-size: 18px;
+    
 }
 
-.menu_item span {
-    float: right; /* 右寄せ */
+.menu_item > p > span {
+    float: right;
+}
+
+.menu_item {
+    margin-bottom: 30px;
 }
 
 
-/* 営業時間 */
+/* 
+    展示委託販売
+*/
 
-.opening_wrapper {
+.even_Imglist {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.opening {
-    background-color: #FFF3E7;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    padding: 20px 40px;
-    border-radius: 20px;
-    width: 304px;
+.Img260_even > img {
+    border-radius: 5px;
 }
 
+.Img260_even {
+    background-color: #DA7D7D;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
 
-.opening h4 {
-    font-size: 25px;
-    font-weight: 700;
+.consignment_p {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 34px;
+    margin-bottom: 50px;
+}
+
+.consignment_p > span {
     color: #526AB2;
-    text-align: center;
-    padding: 5px;
 }
 
-.opening p {
-    font-size: 20px;
-    font-weight: 700;
-    color: #DA7D7D;
-    text-align: center;
-}
 
-/* button */
-
-button {
-    display: flex;
-    justify-content: center;
-}
-
-.view {
-    font-size: 20px;
-    background-color: #526AB2;
-    padding: 10px 60px;
-    border-radius: 50px;
-    color: #DFEEFF;
-}
-
-/* 委託販売 */
+/* 
+    シフト表
+*/
 
