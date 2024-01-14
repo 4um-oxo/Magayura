@@ -1,7 +1,6 @@
 html {
     font-family: "Zen Kaku Gothic New", sans-serif;
-    font-weight: 400;
-    font-style: bold;
+    font-weight: 700;
     font-size: 10px;
 }
 
@@ -16,36 +15,54 @@ body {
 /* headerの背景 */
 header {
     background-color: #fff;
+    padding: 50px 0px;
 }
 
 /*　コンテンツ幅指定・コンテンツのセンター揃え */
 
-.top_wrapper {
+/* .top_wrapper {
     width: 1000px;
     display: flex;
     justify-content: center;
     padding: 50px 0;
+} */
+
+/* ナビゲーションとロゴ周り */
+
+.navlogo_wrapper {
+    /* width: 1000px; */
+    display: flex;
+    justify-content: center;
 }
 
-/* ナビゲーション */
+.navlogo__wrapper {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
 
 .nav_wrapper {
     background-color: #DA7D7D;
     color: #fff;
     font-size: 1.4rem;
-    border-radius: 10px 0 0 10px;
+    font-style: bold;
+    border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 nav > ul {
     display: flex;
+    padding: 0 15px 0 15px;
 }
 
 nav > ul > li {
     padding: 20px 15px;
 }
 
-.nav_wrapper {
-    display: flex;
+/* title */
+
+.page_title_box {
+    text-align: center;
 }
 
 #page_title {
@@ -55,3 +72,70 @@ nav > ul > li {
     font-size: 40px;
     color: #526AB2;
 }
+
+/* ここからメインコンテンツ */
+
+
+/* 偶数コンテンツの背景 */
+
+.container_even {
+    background-color: #FFF3E7;
+}
+
+/* セクションごとの余白 */
+
+section {
+    padding: 100px 0;
+}
+
+/* 各コンテンツタイトル */
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+#menu , #shift , #gallery {
+    color: #FFF3E7;
+}
+
+#consignment , #goods {
+    color: #DA7D7D;
+}
+
+
+/* お問い合わせの背景 */
+
+
+/* メニュー */
+
+/* 画像の余白 */
+
+.menu_dl > div > dt > img {
+    border-radius: 10px;
+    background-color: #FFF3E7;
+    padding: 10px;
+}
+
+.menu_dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu_container {
+    margin: 15px;
+}
+
+/* button */
+
+button{
+    font-size: 20px;
+    background-color: #526AB2;
+    padding: 10px 60px;
+    border-radius: 50px;
+}
+
+
+
+/* 委託販売 */
+
