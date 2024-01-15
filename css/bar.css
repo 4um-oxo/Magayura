@@ -170,22 +170,28 @@ h3 {
     background-color: #ffeee8; /* 背景色を設定 */
     border-radius: 10px; /* 角を丸くする */
     margin-bottom: 50px;
-    padding: 10px 40px;
+    padding: 20px 40px;
     width: 400px; /* 幅を設定 */
 }
 
 /* モバイルビューのスタイルを調整 */
 
-@media (max-width: 600px) .business-hours-container {
+@media (max-width: 600px) {
+
+.business-hours-container {
 flex-direction: column; /* スマホでは要素を縦に並べる */
 }
+
+}
+
 
 
 /* 営業時間テキストのcss */
 
 .business-hours .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #526AB2;
+    padding-bottom: 10px;
 }
 
 .time {
@@ -203,24 +209,32 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
     width: 210px;
     font-size: 1.6rem; /* フォントサイズを設定 */
     cursor: pointer; /* マウスカーソルをポインタにする */
-    transition: background-colo r 0.3s ease; /* 背景色の変更にアニメーションを設定 */
+    transition: background-color 0.3s ease; /* 背景色の変更にアニメーションを設定 */
 }
 
 .view-more:hover {
-background-color: #ff7766; /* ホバー時の背景色を設定 */
+background-color: #DFEEFF; /* ホバー時の背景色を設定 */
+color: #526AB2;
 }
 
 /* レスポンシブ対応 */
 @media (max-width: 600px) {
+
 .business-hours-container {
-padding: 10px;
+    padding: 10px;
+}
+
 }
 
 .business-hours, .view-more {
     width: auto; /* 幅を自動調整にする */
     margin: 10px auto; /* 自動的に中央揃えにする */
 }
-    
+
+.button_wrapper {
+    display: flex;
+    justify-content: center;
+}
 
 
 /* 
@@ -371,7 +385,7 @@ padding: 10px;
     ギャラリー　画像
 */
 
-.even_Imglist {
+.odd_Imglist {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -379,11 +393,11 @@ padding: 10px;
     margin: 0 auto;
 }
 
-.Img260_even > img {
+.Img260_odd > img {
     border-radius: 5px;
 }
 
-.Img260_even {
+.Img260_odd {
     background-color: #FFF3E7;
     border-radius: 10px;
     padding: 10px;
