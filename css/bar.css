@@ -153,7 +153,100 @@ h3 {
 
 
 /* 
+    営業時間・ボタン
+*/
+
+.business-hours-container {
+    display: flex; /* Flexboxレイアウトを適用する */
+    flex-flow: column;
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    text-align: center; /* コンテナの中の要素を中央揃えにする */
+    padding: 20px;
+}
+
+.business-hours {
+    max-width: 1000px;
+    background-color: #ffeee8; /* 背景色を設定 */
+    border-radius: 10px; /* 角を丸くする */
+    margin-bottom: 50px;
+    padding: 10px 40px;
+    width: 400px; /* 幅を設定 */
+}
+
+/* モバイルビューのスタイルを調整 */
+
+@media (max-width: 600px) .business-hours-container {
+flex-direction: column; /* スマホでは要素を縦に並べる */
+}
+
+
+/* 営業時間テキストのcss */
+
+.business-hours .title {
+    font-size: 2rem;
+    color: #526AB2;
+}
+
+.time {
+    color: #DA7D7D; /* 時間の文字色を設定 */
+    font-size: 2rem; /* フォントサイズを設定 */
+}
+
+/* view more のcss */
+
+.view-more {
+    background-color: #526AB2; /* ボタンの背景色を設定 */
+    border-radius: 50px; /* ボタンの角を丸くする */
+    color: #DFEEFF; /* ボタンの文字色を白にする */
+    padding: 10px 60px; /* ボタンの内側の余白を設定 */
+    width: 210px;
+    font-size: 1.6rem; /* フォントサイズを設定 */
+    cursor: pointer; /* マウスカーソルをポインタにする */
+    transition: background-colo r 0.3s ease; /* 背景色の変更にアニメーションを設定 */
+}
+
+.view-more:hover {
+background-color: #ff7766; /* ホバー時の背景色を設定 */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+.business-hours-container {
+padding: 10px;
+}
+
+.business-hours, .view-more {
+    width: auto; /* 幅を自動調整にする */
+    margin: 10px auto; /* 自動的に中央揃えにする */
+}
+    
+
+
+/* 
     展示委託販売
+*/
+
+
+/* 
+    説明文
+*/
+
+.consignment_p {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 34px;
+    margin-bottom: 50px;
+}
+
+.consignment_p > span {
+    font-size: 2rem;
+    color: #526AB2;
+}
+
+
+/* 
+    画像装飾
 */
 
 .even_Imglist {
@@ -175,17 +268,6 @@ h3 {
     margin-bottom: 50px;
 }
 
-.consignment_p {
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 34px;
-    margin-bottom: 50px;
-}
-
-.consignment_p > span {
-    font-size: 2rem;
-    color: #526AB2;
-}
 
 
 /* 
@@ -282,4 +364,28 @@ h3 {
 
 .goods_item {
     margin-bottom: 30px;
+}
+
+
+/* 
+    ギャラリー　画像
+*/
+
+.even_Imglist {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.Img260_even > img {
+    border-radius: 5px;
+}
+
+.Img260_even {
+    background-color: #FFF3E7;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 50px;
 }
