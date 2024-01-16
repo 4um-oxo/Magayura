@@ -18,14 +18,6 @@ header {
     padding: 50px 0px;
 }
 
-/*　コンテンツ幅指定・コンテンツのセンター揃え */
-
-/* .top_wrapper {
-    width: 1000px;
-    display: flex;
-    justify-content: center;
-    padding: 50px 0;
-} */
 
 /* ナビゲーションとロゴ周り */
 
@@ -59,6 +51,75 @@ nav > ul > li {
     padding: 20px 15px;
 }
 
+/* ナビゲーションリンク - アクティブスタイル */
+nav > ul > li.active a {
+    position: relative; /* ポジションを相対的に設定 */
+}
+
+nav > ul > li.active a::after {
+    content: '';
+    position: absolute; /* ポジションを絶対的に設定 */
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* ラインの幅をリンクと同じに設定 */
+    height: 5px; /* ラインの高さを設定 */
+    background-color: #526AB2; /* ラインの背景色を設定 */
+    border-radius: 10px 10px 0 0; /* 上半分に角丸を設定 */
+}
+
+/* ハンバーガーメニューアイコンのスタイル */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* スマートフォンビューでのナビゲーションとハンバーガーメニューの表示設定 */
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+        padding: 20px;
+    }
+
+    nav > ul {
+        display: none;
+    }
+
+    .nav-active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ハンバーガーメニューがアクティブなときのアイコンの変化 */
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navlogo__wrapper {
+        margin: 0 30px;
+    }    
+}
+    
+
+
 /* title */
 
 .page_title_box {
@@ -77,10 +138,6 @@ nav > ul > li {
 --------------ここからメインコンテンツ-------------
  */
 
-/* 親要素の幅指定 */
-
-
-
 
 /* 偶数コンテンツの背景 */
 
@@ -88,11 +145,17 @@ nav > ul > li {
     background-color: #FFF3E7;
 }
 
+/* お問い合わせの背景 */
+#inquiry {
+    background-color: #fff;
+}
+
 /* セクションごとの余白 */
 
 section {
     padding: 100px 0;
 }
+
 
 /* 各コンテンツタイトル */
 
@@ -306,6 +369,23 @@ color: #526AB2;
     text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+
+    .shift_Img img {
+        width: 400px;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .menberImg_wrapper img {
+        width: 112px;
+        height: auto;
+    }
+    
+    .menber_item {
+        margin: 5px;
+    }
+}
 
 
 /* メンバーリスト */
@@ -314,7 +394,7 @@ color: #526AB2;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 500px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -403,3 +483,281 @@ color: #526AB2;
     padding: 10px;
     margin-bottom: 50px;
 }
+
+
+
+/* お問い合わせ */
+
+#inquiry {
+    text-align: center;
+}
+
+.inquiry__banner__wrapper {
+    margin-bottom: 50px;
+}
+
+.inquiry__banner__wrapper p {
+    margin-top: 10px;
+}
+
+.inquiry__text {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* 2番目のinquiry__banner__wrapperに続くinquiry__textをターゲットにする */
+.inquiry__banner__wrapper:nth-of-type(2) + .inquiry__text {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* 2番目のinquiry__banner__wrapper内のsvgとpのマージンを調整 */
+.inquiry__banner__wrapper:nth-of-type(2) svg,
+.inquiry__banner__wrapper:nth-of-type(2) p {
+    margin: 10px;
+}
+
+
+/* footer */
+
+/* フッター全体のスタイル */
+
+footer {
+    background-color: #F0F0F0;
+    color: #DA7D7D;
+    padding-top: 50px;
+}
+
+
+/* SNSアイコン */
+
+.social-links {
+    text-align: center; /* アイコンを中央揃えに */
+    margin-bottom: 20px; /* 下部の余白 */
+    display: flex;
+    justify-content: center;
+}
+
+
+.social-links__icon {
+    background-color: #DA7D7D;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* 横軸中央揃え */
+    align-items: center; /* 縦軸中央揃え */
+    margin-bottom: 50px;
+}
+
+
+.social-links a {
+    display: inline-flex; /* リンクをフレックスアイテムとして表示 */
+    align-items: center; /* 縦軸中央揃え */
+    justify-content: center; /* 横軸中央揃え */
+}
+
+.social-links__icon:first-child {
+    margin-right: 40px;
+}
+
+
+/* フッター中部 */
+
+/* フッター中部の横並び */
+.footer__middle__container {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* フッターの会社概要 */
+.contact-info address {
+    font-size: 10px;
+    font-weight: 500;
+
+}
+
+.contact-info dt {
+    margin-bottom: 10px;
+}
+
+
+/* フッターのナビ */
+
+/* フッターのナビを各種横並び */
+
+.footer__nav__container {
+    display: flex;
+}
+
+.footer__nav__item:not(:last-child){
+    margin-right: 50px;
+}
+
+.footer__nav__item h6 {
+    font-size: 20px;
+}
+
+.footer__nav__item li {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+
+/* コピーライト */
+
+.copyright {
+    background-color: #DA7D7D;
+    margin-top: 50px;
+    padding: 10px;
+    width: 100%; /* これを追加 */
+    max-width: 100%; /* これが既にある場合、追加する必要はありません */
+    text-align: center; /* 親要素も中央揃えに */
+}
+
+/* 中央に配置されたテキスト */
+.copyright small {
+    color: #fff;
+    font-size: 14px;
+    text-align: center; /* これが既にある場合、追加する必要はありません */
+}
+
+
+/* フッターのレスポンシブ */
+
+/* スマートフォン用のスタイル (画面幅が600px以下) */
+@media (max-width: 600px) {
+    .footer__middle__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__nav__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__nav__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .social-links__icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+/* タブレット用のスタイル (画面幅が601pxから900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .footer__nav__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .social-links__icon {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-info address, .footer__nav__item li {
+        font-size: 14px;
+    }
+
+    .footer__nav__item h6 {
+        font-size: 18px;
+    }
+}
+@media (max-width: 768px) {
+    /* .footer__middle__containerの子要素のうち、.contact-infoのみを縦並びにする */
+    .footer__middle__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .contact-infoのスタイル調整 */
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* 下の要素との間隔 */
+        width: 100%; /* 幅を調整 */
+    }
+
+    /* .footer__nav__containerと.footer__nav__itemは横並びのまま */
+    .footer__nav__container {
+        flex-wrap: wrap; /* 必要に応じて折り返す */
+        justify-content: center; /* 中央揃え */
+    }
+
+    .footer__nav__item {
+        margin-right: 10px; /* 項目間の間隔 */
+        margin-bottom: 10px; /* 下の行との間隔 */
+    }
+}
+
+
+
+
+/* 
+    TOPに戻るボタン
+*/
+
+/***追従するトップへ戻るボタン***/
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    text-align: center; /* テキストとSVGを中央揃えにする */
+    background-color: #526AB2; /* 背景色を設定 */
+    border-radius: 50%; /* 正円の形にする */
+    padding: 15px 20px; /* 上下に9px、左右に17pxの余白を設定 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
+}
+
+#back-to-top:hover {
+    background-color: #DFEEFF;
+}
+
+#back-to-top svg:hover , span:hover {
+    color: #526AB2;
+}
+
+    
+    #back-to-top svg {
+    /* SVGのサイズや余白の調整 */
+    width: 30px; /* SVGの幅を設定 */
+    height: 20px; /* SVGの高さを設定 */
+    margin-bottom: 5px; /* SVGとテキストの間の余白 */
+    }
+    
+    #back-to-top span {
+    display: block; /* ブロック要素として表示 */
+    color: white; /* 文字色を白に */
+    font-size: 14px; /* 文字サイズを適宜調整 */
+    font-weight: bold; /* 文字を太字に */
+    }
+    
+    /* 画面の小さいデバイスで見たときにボタンが大きすぎないように調整する */
+    @media (max-width: 600px) {
+    #back-to-top {
+    padding: 20px; /* 小さいデバイスでは全体的に余白を減らす */
+    bottom: 10px;
+    right: 10px;
+    }
+    #back-to-top svg {
+    width: 24px; /* SVGの幅を小さくする */
+    height: 16px; /* SVGの高さを小さくする */
+    }
+    #back-to-top span {
+    font-size: 10px; /* テキストのサイズを小さくする */
+    }
+    }
+/***トップへ戻るボタンここまで***/
