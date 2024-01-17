@@ -1,0 +1,56 @@
+.slider{
+    width:70%;
+    margin:0 auto;
+}
+.slider img{ width:100%; }
+.slider .slick-slide{ height:auto!important; }
+.slider .slick-arrow{ z-index:2!important; }
+
+/* 矢印の位置を調整 */
+.slider .slick-arrow{
+    width: initial!important;
+    height: initial!important;
+    z-index:2!important;
+    transform: rotate(90deg);
+    top: initial;
+    left: initial!important;
+    right: 0!important;
+}
+.slider .slick-arrow:before{ font-size: 50px; }
+.slider .slick-prev{ top: 0; }
+.slider .slick-next{ bottom: 0; }
+
+/* ドットの位置を調整 */
+.slider .slick-dots{
+    width: 50px;
+    right: 0;
+    bottom: initial;
+    top: 50%;
+    transform: translateY(-50%) translateX(-10px);
+}
+
+.slick-arrow:before{
+	content:""!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.slick-prev:before{
+    width: 50px;  /* 画像の幅 */
+    height: 50px; /* 画像の高さ */
+    background: url(../images/next.png)!important;
+    background-size: contain!important;
+    transform: rotate(90deg) translateY(-10px) translateX(10px); /* この行を追加 */
+    display: block; /* 追加: この行がないと、contentが空の場合に表示されないことがあります */
+}
+
+.slick-next:before{
+    width: 50px;  /* 画像の幅 */
+    height: 50px; /* 画像の高さ */
+    background: url(../images/back.png)!important;
+    background-size: contain!important;
+    transform: rotate(90deg) translateY(60px) translateX(10px); /* この行を追加 */
+    display: block; /* 追加: この行がないと、contentが空の場合に表示されないことがあります */
+}
