@@ -8,8 +8,8 @@ html {
 /* headerのcss */
 
 body {
-    background-color: #DA7D7D; 
-    /* 全体の背景色を #DA7D7D に設定 */
+    background-color: #526AB2; 
+    /* 全体の背景色を #526AB2 に設定 */
 }
 
 /* headerの背景 */
@@ -34,7 +34,7 @@ header {
 }
 
 .nav_wrapper {
-    background-color: #DA7D7D;
+    background-color: #526AB2;
     color: #fff;
     font-size: 1.4rem;
     font-style: bold;
@@ -64,7 +64,7 @@ nav > ul > li.active a::after {
     transform: translateX(-50%);
     width: 100%; /* ラインの幅をリンクと同じに設定 */
     height: 5px; /* ラインの高さを設定 */
-    background-color: #526AB2; /* ラインの背景色を設定 */
+    background-color: #F7C355; /* ラインの背景色を設定 */
     border-radius: 10px 10px 0 0; /* 上半分に角丸を設定 */
 }
 
@@ -131,8 +131,9 @@ nav > ul > li.active a::after {
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
-    color: #526AB2;
+    color: #F7C355;
 }
+
 
 
 
@@ -144,7 +145,7 @@ nav > ul > li.active a::after {
 /* 偶数コンテンツの背景 */
 
 .container_even {
-    background-color: #FFF3E7;
+    background-color: #D6E5FF;
 }
 
 /* お問い合わせの背景 */
@@ -167,6 +168,7 @@ h3 {
     margin-bottom: 50px;
 }
 
+
 /* 
     タイトル横ライン
 */
@@ -178,14 +180,14 @@ h3 {
 }
 
 .heading__odd::before, .heading__odd::after {
-    background-color: #FFF3E7; /* 横線の色 */
+    background-color: #D6E5FF; /* 横線の色 */
     content: "";
     height: 3px; /* 横線の高さ */
     width: 300px;
 }
 
 .heading__even::before, .heading__even::after {
-    background-color: #DA7D7D; /* 横線の色 */
+    background-color: #526AB2; /* 横線の色 */
     content: "";
     height: 3px; /* 横線の高さ */
     width: 300px;
@@ -199,111 +201,24 @@ h3 {
 }
 
 
-/* 文字色 */
+  /* 色 */
 
-#menu , #shift , #gallery {
-    color: #FFF3E7;
+#schedule , #shift , #gallery {
+    color: #D6E5FF;
 }
 
 #consignment , #goods {
-    color: #DA7D7D;
-}
-
-/* 
-
---------------ここからメニュー----------
-
-
-画像の並び ・　画像装飾
-
- */
-
-.menu_list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.menu_item img {
-    border-radius: 5px;
-}
-
-.menu_item > .menuitemImg_wrapper {
-    background-color: #FFF3E7;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.menu_item p {
-    font-size: 18px;
-    
-}
-
-.menu_item > p > span {
-    float: right;
-}
-
-.menu_item {
-    margin-bottom: 30px;
-}
-
-
-/* 
-    営業時間・ボタン
-*/
-
-.business-hours-container {
-    display: flex; /* Flexboxレイアウトを適用する */
-    flex-flow: column;
-    justify-content: center; /* 水平方向の中央揃え */
-    align-items: center; /* 垂直方向の中央揃え */
-    text-align: center; /* コンテナの中の要素を中央揃えにする */
-    padding: 20px;
-}
-
-.business-hours {
-    max-width: 1000px;
-    background-color: #ffeee8; /* 背景色を設定 */
-    border-radius: 10px; /* 角を丸くする */
-    margin-bottom: 50px;
-    padding: 20px 40px;
-    width: 400px; /* 幅を設定 */
-}
-
-/* モバイルビューのスタイルを調整 */
-
-@media (max-width: 600px) {
-
-.business-hours-container {
-flex-direction: column; /* スマホでは要素を縦に並べる */
-}
-
-}
-
-
-
-/* 営業時間テキストのcss */
-
-.business-hours .title {
-    font-size: 2.5rem;
     color: #526AB2;
-    padding-bottom: 10px;
 }
 
-.time {
-    color: #DA7D7D; /* 時間の文字色を設定 */
-    font-size: 2rem; /* フォントサイズを設定 */
-}
+/* 
 
 /* view more のcss */
 
 .view-more {
-    background-color: #526AB2; /* ボタンの背景色を設定 */
+    background-color: #F7C355; /* ボタンの背景色を設定 */
     border-radius: 50px; /* ボタンの角を丸くする */
-    color: #DFEEFF; /* ボタンの文字色を白にする */
+    color: #ff8000; /* ボタンの文字色を白にする */
     padding: 10px 60px; /* ボタンの内側の余白を設定 */
     width: 210px;
     font-size: 1.6rem; /* フォントサイズを設定 */
@@ -312,8 +227,8 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
 }
 
 .view-more:hover {
-background-color: #DFEEFF; /* ホバー時の背景色を設定 */
-color: #526AB2;
+background-color: #ff8000; /* ホバー時の背景色を設定 */
+color: #F7C355;
 }
 
 /* レスポンシブ対応 */
@@ -336,55 +251,10 @@ color: #526AB2;
 }
 
 
-/* 
-    展示委託販売
-*/
 
 
 /* 
-    説明文
-*/
-
-.consignment_p {
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 34px;
-    margin-bottom: 50px;
-}
-
-.consignment_p > span {
-    font-size: 2rem;
-    color: #526AB2;
-}
-
-
-/* 
-    画像装飾
-*/
-
-.even_Imglist {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.Img260_even > img {
-    border-radius: 5px;
-}
-
-.Img260_even {
-    background-color: #DA7D7D;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 50px;
-}
-
-
-
-/* 
-    今月のシフト
+    今月のスケジュール
 */
 
 .text {
@@ -394,20 +264,20 @@ color: #526AB2;
     margin-bottom: 50px;
 }
 
-.shift_Img > img {
-    background-color: #FFF3E7;
+.schedule_Img > img {
+    background-color: #D6E5FF;
     border-radius: 20px;
     padding: 20px;
     margin-bottom: 50px;
 }
 
-.shift_Img {
+.schedule_Img {
     text-align: center;
 }
 
 @media screen and (max-width: 768px) {
 
-    .shift_Img img {
+    .schedule_Img img {
         width: 400px;
         height: auto;
         padding: 10px;
@@ -439,7 +309,7 @@ color: #526AB2;
 }
 
 .menber_item > .menberImg_wrapper {
-    background-color: #FFF3E7;
+    background-color: #D6E5FF;
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 10px;
@@ -464,7 +334,7 @@ color: #526AB2;
 */
 
 
-.goods_list {
+.past-events__list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -472,27 +342,27 @@ color: #526AB2;
     margin: 0 auto;
 }
 
-.goods_item img {
+.past-events__item img {
     border-radius: 5px;
 }
 
-.goods_item > .goodsImg_wrapper {
-    background-color: #DA7D7D;
+.past-events__item > .past-events__itemImg_wrapper {
+    background-color: #526AB2;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
 }
 
-.goods_item p {
+.past-events__item h4 {
     font-size: 18px;
-    
+    color: #526AB2;
 }
 
-.goods_item > p > span {
-    float: right;
+.past-events__item p {
+    font-size: 16px;
 }
 
-.goods_item {
+.past-events__item {
     margin-bottom: 30px;
 }
 
@@ -514,7 +384,7 @@ color: #526AB2;
 }
 
 .Img260_odd {
-    background-color: #FFF3E7;
+    background-color: #D6E5FF;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 50px;
@@ -561,7 +431,7 @@ color: #526AB2;
 
 footer {
     background-color: #F0F0F0;
-    color: #DA7D7D;
+    color: #526AB2;
     padding-top: 50px;
 }
 
@@ -577,7 +447,7 @@ footer {
 
 
 .social-links__icon {
-    background-color: #DA7D7D;
+    background-color: #526AB2;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -648,7 +518,7 @@ footer {
 /* コピーライト */
 
 .copyright {
-    background-color: #DA7D7D;
+    background-color: #526AB2;
     margin-top: 50px;
     padding: 10px;
     width: 100%; /* これを追加 */
@@ -752,7 +622,7 @@ footer {
     right: 20px;
     cursor: pointer;
     text-align: center; /* テキストとSVGを中央揃えにする */
-    background-color: #526AB2; /* 背景色を設定 */
+    background-color: #F7C355; /* 背景色を設定 */
     border-radius: 50%; /* 正円の形にする */
     padding: 15px 20px; /* 上下に9px、左右に17pxの余白を設定 */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
@@ -763,7 +633,7 @@ footer {
 }
 
 #back-to-top svg:hover , span:hover {
-    color: #526AB2;
+    color: #F7C355;
 }
 
     
