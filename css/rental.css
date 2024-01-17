@@ -4,18 +4,23 @@
 .rental__wrapper__item{
     /*波紋の基点とするためrelativeを指定*/
   position: absolute;
-  top: 135px;
+  top: 105px;
   right: 0;
     /*波紋の形状*/
   display:inline-block;
   background: #fff;
-  width: 350px;
-  height: 350px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
-  color:#526AB2;
   outline: none;
+  font-size: 20px;
   /*アニメーションの設定*/
     transition: all .3s;
+
+    /* テキストのスタイル */
+      display: flex;
+      justify-content: center;
+      align-items: center;    
 }
 
 
@@ -25,12 +30,12 @@
     content: '';
     /*絶対配置で波形の位置を決める*/
     position: absolute;
-    left: -25%;
-    top: -25%;
+    left: -10%;
+    top: -10%;
     /*波形の形状*/
     border: 10px solid #fff;
-    width: 148%;
-    height: 148%;
+    width: 120%;
+    height: 120%;
     border-radius: 50%;
     /*はじめは不透明*/
     opacity: 1;
@@ -54,13 +59,12 @@
   }
 }
 
-/*中央 text*/
-.rental__wrapper__item span {
-  position: relative;
-  /* margin: 0 auto; */
-  top: 39%;
-  font-size: 18px;
+/*　波形の中央テキスト部分 */
+
+.rental__wrapper__item__text {
+  color:#526AB2;
 }
+
 
 .rental__list li{
   /* 背景の円 */
@@ -72,6 +76,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.rental__list li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 
 .rental__list li span {
   font-size: 18px;
@@ -92,15 +101,15 @@
 .rental__wrapper{
     position: relative;
     width: 800px;
-    height: 600px;
+    height: 690px;
     vertical-align:middle; 
     text-align: center;
     margin: 0 auto;
 }
 
-p{
+/* p{
       margin: 0 0 10px 0;
-}
+} */
 
 
 /* 
@@ -127,3 +136,7 @@ p{
 
 */
 
+.rental__list__1 , .rental__list__4 {
+  position: relative;
+  left: 150px;
+}
