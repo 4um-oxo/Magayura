@@ -1,0 +1,63 @@
+.faq-ttl {
+    position: relative;
+    padding: 15px 9% 15px 15px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.faq-ttl p,
+.faq-content p {
+    display: flex;
+    line-height: 40px;
+}
+.faq-ttl p::before {
+    content: 'Q.';
+    display: inline-block;
+    margin-right: 1em;
+    color: #526AB2;
+}
+.faq-content + .faq-ttl {
+    margin-top: 25px;
+}
+.faq-content {
+    display: none;
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 10px 15px;
+}
+.faq-content p::before {
+    content: 'A.';
+    display: inline-block;
+    margin-right: 1em;
+    color: red;
+}
+
+
+
+  /* 「+」を追加 */
+.faq-ttl::before,
+.faq-ttl::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 4%;
+    width: 12px;
+    height: 1px;
+    margin: auto;
+    background-color: #000;
+}
+.faq-ttl::after {
+    transform: rotate(90deg);
+    transition: .3s;
+}
+  /* クリックしたときに「+」を「−」に変更 */
+.faq-ttl.is-active::after {
+    transform: rotate(180deg);
+}
+
+
+.faq-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 20px;
+}

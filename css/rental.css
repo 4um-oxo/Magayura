@@ -31,7 +31,7 @@
 
 /* 波形アニメーション */
 .rental__wrapper__item::after,
-.rental__wrapper__item::before {
+.rental__wrapper__item::before, .ripple {
   content: '';
   position: absolute;
   left: -10%;
@@ -41,12 +41,23 @@
   height: 120%;
   border-radius: 50%;
   opacity: 1;
-  animation: 1s circleanime linear infinite;
+  animation: 2s circleanime linear infinite;
 }
 
+
+/* アニメーション遅延 */
 .rental__wrapper__item::before {
-  animation-delay: .5s; 
+  animation-delay: 1s; 
 }
+
+.ripple:nth-child(2) {
+  animation-delay: .5s;
+}
+
+.ripple:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
 
 @keyframes circleanime {
   0% {

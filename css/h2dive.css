@@ -1,0 +1,37 @@
+#DIVE_title {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.title_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height : 100vh; */
+}
+
+/* 特殊文字のスタイル */
+#DIVE_title .special {
+  color: #EA513A;
+  font-family: 'Rochester', sans-serif;
+  font-size: 270px;
+  line-height: 200px;
+}
+
+
+h2 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  transform: translateZ(0); /* 古いブラウザ向け */
+  will-change: transform;
+}
+
+#DIVE_title br {
+  margin-bottom: -20px; /* 改行タグの下部マージンを調整 */
+}

@@ -8,8 +8,8 @@ html {
 /* headerのcss */
 
 body {
-    background-color: #526AB2; 
-    /* 全体の背景色を #526AB2 に設定 */
+    background-color: #F7C355; 
+    /* 全体の背景色を #F7C355 に設定 */
 }
 
 /* headerの背景 */
@@ -18,7 +18,7 @@ header {
     padding: 50px 0px;
 }
 
-    
+
 /* ナビゲーションとロゴ周り */
 
 .navlogo_wrapper {
@@ -34,7 +34,7 @@ header {
 }
 
 .nav_wrapper {
-    background-color: #526AB2;
+    background-color: #F7C355;
     color: #fff;
     font-size: 1.4rem;
     font-style: bold;
@@ -64,7 +64,7 @@ nav > ul > li.active a::after {
     transform: translateX(-50%);
     width: 100%; /* ラインの幅をリンクと同じに設定 */
     height: 5px; /* ラインの高さを設定 */
-    background-color: #F7C355; /* ラインの背景色を設定 */
+    background-color: #E95039; /* ラインの背景色を設定 */
     border-radius: 10px 10px 0 0; /* 上半分に角丸を設定 */
 }
 
@@ -131,7 +131,7 @@ nav > ul > li.active a::after {
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
-    color: #F7C355;
+    color: #E95039;
 }
 
 
@@ -187,7 +187,7 @@ h3 {
 }
 
 .heading__even::before, .heading__even::after {
-    background-color: #526AB2; /* 横線の色 */
+    background-color: #F7C355; /* 横線の色 */
     content: "";
     height: 3px; /* 横線の高さ */
     width: 300px;
@@ -208,7 +208,7 @@ h3 {
 }
 
 #consignment , #goods {
-    color: #526AB2;
+    color: #F7C355;
 }
 
 /* 
@@ -251,6 +251,30 @@ color: #F7C355;
 }
 
 
+/* 
+
+文字タイトル
+
+*/
+
+#dive {
+    color: #FFF;
+    text-align: center;
+    font-family: Russo One;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 220px; /* 110% */
+}
+
+#dive span {
+    color: #E8631F;
+    font-family: Rochester;
+    font-size: 270px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 220px;    
+}
 
 
 /* 
@@ -347,7 +371,7 @@ color: #F7C355;
 }
 
 .past-events__item > .past-events__itemImg_wrapper {
-    background-color: #526AB2;
+    background-color: #F7C355;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
@@ -355,7 +379,7 @@ color: #F7C355;
 
 .past-events__item h4 {
     font-size: 18px;
-    color: #526AB2;
+    color: #F7C355;
 }
 
 .past-events__item p {
@@ -431,7 +455,7 @@ color: #F7C355;
 
 footer {
     background-color: #F0F0F0;
-    color: #526AB2;
+    color: #F7C355;
     padding-top: 50px;
 }
 
@@ -447,7 +471,7 @@ footer {
 
 
 .social-links__icon {
-    background-color: #526AB2;
+    background-color: #F7C355;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -518,7 +542,7 @@ footer {
 /* コピーライト */
 
 .copyright {
-    background-color: #526AB2;
+    background-color: #F7C355;
     margin-top: 50px;
     padding: 10px;
     width: 100%; /* これを追加 */
@@ -632,7 +656,7 @@ footer {
     background-color: #DFEEFF;
 }
 
-#back-to-top svg:hover , span:hover {
+#back-to-top svg:hover , .back-to-top_text:hover {
     color: #F7C355;
 }
 
@@ -644,7 +668,7 @@ footer {
     margin-bottom: 5px; /* SVGとテキストの間の余白 */
     }
     
-    #back-to-top span {
+    #back-to-top .back-to-top_text {
     display: block; /* ブロック要素として表示 */
     color: white; /* 文字色を白に */
     font-size: 14px; /* 文字サイズを適宜調整 */
@@ -662,7 +686,7 @@ footer {
     width: 24px; /* SVGの幅を小さくする */
     height: 16px; /* SVGの高さを小さくする */
     }
-    #back-to-top span {
+    #back-to-top .back-to-top_text {
     font-size: 10px; /* テキストのサイズを小さくする */
     }
     }

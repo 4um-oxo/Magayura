@@ -1,0 +1,156 @@
+.cp_bigbox {
+    background-color: #FBF9EC;
+}
+
+.cp_container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+
+.cp_wrapper {
+    position: relative;
+    margin: 0 auto;
+}
+
+.cp_loading05 {
+    position: relative;
+    width: 500px; /* 大きな円のサイズ */
+    height: 500px;
+    background: radial-gradient(50% 50% at 50% 50%, #FFB800 80%, rgba(255, 184, 0, 0.00) 100%);
+    border-radius: 50%;
+    margin: 100px auto; /* 画面の中央に配置 */
+}
+
+.cp_text {
+    width: 500px;
+    height: 500px;
+    font-size: 30px;
+    color: #fff;
+    display: flex; /* Flexboxを使用 */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    text-align: center;
+    line-height: 50px;
+}
+
+.cp_item_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    /* 回転アニメーションを適用 */
+    animation: counterRotate 12s linear infinite;
+  }
+  
+  @keyframes counterRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .cp_holder1 .cp_item_text {
+    animation-delay: -4s; /* 同じアニメーション遅延を設定 */
+  }
+  .cp_holder2 .cp_item_text {
+    animation-delay: -8s;
+  }
+  .cp_holder3 .cp_item_text {
+    animation-delay: -12s;
+  }
+  
+
+.cp_holder {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200px; /* 小さい円のサイズ */
+    height: 200px;
+    /* 大きな円の外周にかかるように調整 */
+    transform-origin: 50% calc(250px + 100px); /* 大きな円の半径 + 小さい円の半径の半分 */
+    margin-top: -100px; /* 小さい円の高さの半分 */
+    margin-left: -100px; /* 小さい円の幅の半分 */
+    animation: loading05 12s linear infinite; /* アニメーションを適用 */
+}
+
+.cp_holder1 {
+    animation-delay: -4s; /* アニメーション遅延を設定 */
+}
+.cp_holder2 {
+    animation-delay: -8s; /* 各円が異なるタイミングで回転するように */
+}
+.cp_holder3 {
+    animation-delay: -12s;
+}
+
+.cp_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(50% 50% at 50% 50%, #E95039 80%, rgba(255, 184, 0, 0.00) 100%);
+    border-radius: 50%;}
+
+@keyframes loading05 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.cp__coment__text {
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+
+.cp__coment__text p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 52px;
+    padding-bottom: 100px;
+}
+
+
+
+/* ふわっとてきすと */
+
+.blur{
+	animation-name:blurAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes blurAnime{
+  from {
+	filter: blur(10px);
+	transform: scale(1.02);
+	opacity: 0;
+  }
+
+  to {
+	filter: blur(0);
+	transform: scale(1);
+	opacity: 1;
+  }
+}
+ 
+.blurTrigger{
+    opacity: 0;
+}

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../css/event.css">
     <link rel="stylesheet" href="../css/rental.css">
     <link rel="stylesheet" href="../css/slider.css">
+    <link rel="stylesheet" href="../css/faq.css">
 
 
     <!-- font -->
@@ -265,6 +266,8 @@
                         イベントを開催することもできます。 <br>
                         あなたのやりたいこと叶えます。
                     </p>
+                    <div class="ripple"></div> <!-- 新しい要素 -->
+                    <div class="ripple"></div> <!-- 新しい要素 -->
                 </div>
                 <ul class="rental__list">
                     <li class="rental__list__item rental__list__item__odd">
@@ -287,35 +290,85 @@
         <!-- 写真 -->
         <div class="slider">   
             <div><img src="../images/デザイン_1/img1.png"></div>
-            <div><img src="../images/デザイン_1/img2.png"></div>   
             <div><img src="../images/デザイン_1/img3.png"></div>
+            <div><img src="../images/デザイン_1/img2.png"></div>   
         </div>
         
 
     </section>  
     
     <!-- よくある質問 -->
-    <section>
+    <section class="container_even">
         <h3 class="heading__even">
             よくある質問
         </h3>
-        <ul>
-            <li>
+    <link rel="stylesheet" href="../css/test.css">
+    
+
+    <!-- よくある質問アコーディオン -->
+    <dl class="faq-list">
+
+        <dt class="faq-ttl">
+            <p>
                 どれくらいの人が入りますか？
-            </li>
+            </p>
+        </dt>
+        <dd class="faq-content">
+            <p>
+                2F収容人数 30名(座り20名) <br>
+                3F収容人数 15名 <br>
+                全フロア収容人数 50名(目安です)
+            </p>
+        </dd>
 
-            <li>
-                使用機材を教えてください
-            </li>
 
-            <li>
+        <dt class="faq-ttl">
+            <p>
+                利用料金を教えてください
+            </p>
+        </dt>
+        <dd class="faq-content">
+            <p>
+                平日 25,000円(税別) <br>
+                土日 30,000円(税別) <br>
+                用途によって料金が変動いたします。詳しくは、お問い合わせください。 <br>
+            </p>
+        </dd>
+
+        <dt class="faq-ttl">
+            <p>
                 どんな用途で使用できますか？
-            </li>
+            </p>
+        </dt>
+        <dd class="faq-content">
+            <p>
+                3Fレイアウトも変更可能ですのでいろんな用途で使用していただけます。 <br>
+                ぜひ一度ご相談ください。
 
-            <li>
-                レンタル料金を教えてください
-            </li>
-        </ul>
+            </p>
+        </dd>
+
+        <dt class="faq-ttl">
+            <p>
+                使用機材を教えてください
+            </p>
+        </dt>
+        <dd class="faq-content">
+            <p>
+                MIXER : ALLEN&HEATH ZED-16FX <br>
+                SPEAKER : JBL JRX100 <br>
+                POWER AMP : Behringer iNUKE NU3000 <br>
+                MIC : shure BETA 58/BETA 57/SM 58 <br>
+                KEYBORD : YAMAHA P-45 <br>
+                AMPLIFER : YAMAHA J-25 / Hughes&Kettner Edition Tube 20th Anniversary / ORANGE Amp CRUSH 20L / CRUSH 50BXT(for bass) <br>
+                CDJ : CDJ-900 <br>
+                TURN TABLE : SL-1200MK3D <br>
+                DJ MIXER : DJX750
+            </p>
+        </dd>
+    </dl>
+
+
     </section>
     
 
@@ -591,6 +644,7 @@
 <!-- js -->
 <script src="../script/nav.js"></script>
 <script src="../script/slider.js"></script>
+<script src="../script/accordion.js"></script>
 
 
 <!-- カルーセル -->
