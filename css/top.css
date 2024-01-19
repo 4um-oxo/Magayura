@@ -1,0 +1,221 @@
+
+html {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+
+
+.top_header h1 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+
+/* テキスト */
+
+.home_svg, .home_textbox {
+    align-items: center;
+    text-align: center;
+    justify-content: center
+}
+
+.home_svg {
+    margin-bottom: 20px;
+}
+
+.home_textbox h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.home_textbox p {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+/* footer */
+
+/* フッター全体のスタイル */
+
+footer {
+    background-color: #F0F0F0;
+    color: #254298;
+    padding-top: 50px;
+}
+
+
+/* SNSアイコン */
+
+.social-links {
+    text-align: center; /* アイコンを中央揃えに */
+    margin-bottom: 20px; /* 下部の余白 */
+    display: flex;
+    justify-content: center;
+}
+
+
+.social-links__icon {
+    background-color: #254298;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* 横軸中央揃え */
+    align-items: center; /* 縦軸中央揃え */
+    margin-bottom: 50px;
+}
+
+
+.social-links a {
+    display: inline-flex; /* リンクをフレックスアイテムとして表示 */
+    align-items: center; /* 縦軸中央揃え */
+    justify-content: center; /* 横軸中央揃え */
+}
+
+.social-links__icon:first-child {
+    margin-right: 40px;
+}
+
+
+/* フッター中部 */
+
+/* フッター中部の横並び */
+.footer__middle__container {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* フッターの会社概要 */
+.contact-info address {
+    font-size: 10px;
+    font-weight: 500;
+
+}
+
+.contact-info dt {
+    margin-bottom: 10px;
+}
+
+
+/* フッターのナビ */
+
+/* フッターのナビを各種横並び */
+
+.footer__nav__container {
+    display: flex;
+}
+
+.footer__nav__item:not(:last-child){
+    margin-right: 50px;
+}
+
+.footer__nav__item h6 {
+    font-size: 20px;
+}
+
+.footer__nav__item li {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+
+/* コピーライト */
+
+.copyright {
+    background-color: #254298;
+    margin-top: 50px;
+    padding: 10px;
+    width: 100%; /* これを追加 */
+    max-width: 100%; /* これが既にある場合、追加する必要はありません */
+    text-align: center; /* 親要素も中央揃えに */
+}
+
+/* 中央に配置されたテキスト */
+.copyright small {
+    color: #fff;
+    font-size: 14px;
+    text-align: center; /* これが既にある場合、追加する必要はありません */
+}
+
+
+/* フッターのレスポンシブ */
+
+/* スマートフォン用のスタイル (画面幅が600px以下) */
+@media (max-width: 600px) {
+    .footer__middle__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__nav__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__nav__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .social-links__icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+/* タブレット用のスタイル (画面幅が601pxから900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .footer__nav__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .social-links__icon {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-info address, .footer__nav__item li {
+        font-size: 14px;
+    }
+
+    .footer__nav__item h6 {
+        font-size: 18px;
+    }
+}
+@media (max-width: 768px) {
+    /* .footer__middle__containerの子要素のうち、.contact-infoのみを縦並びにする */
+    .footer__middle__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .contact-infoのスタイル調整 */
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* 下の要素との間隔 */
+        width: 100%; /* 幅を調整 */
+    }
+
+    /* .footer__nav__containerと.footer__nav__itemは横並びのまま */
+    .footer__nav__container {
+        flex-wrap: wrap; /* 必要に応じて折り返す */
+        justify-content: center; /* 中央揃え */
+    }
+
+    .footer__nav__item {
+        margin-right: 10px; /* 項目間の間隔 */
+        margin-bottom: 10px; /* 下の行との間隔 */
+    }
+}
+

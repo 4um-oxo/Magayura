@@ -117,278 +117,164 @@ nav > ul > li.active a::after {
         margin: 0 30px;
     }    
 }
-    
 
 
-/* title */
 
-.page_title_box {
-    text-align: center;
-}
+/* キャラクター部分 */
 
-#page_title {
-    font-family: "Russo One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 40px;
-    color: #F7C355;
+.character__wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
 }
 
 
 
-
-/* 
---------------ここからメインコンテンツ-------------
- */
-
-
-/* 偶数コンテンツの背景 */
-
-.container_even {
-    background-color: #D6E5FF;
+.character {
+    background-image: url(../images/album_bg.png);
 }
 
-/* お問い合わせの背景 */
-#inquiry {
+.character__container {
+    padding-top: 100px;
+    display: flex;
+}
+
+.Yura_text_box {
+    background-image: url(../images/hukidasi.svg);
+    background-repeat: no-repeat;
+    background-position: 13px 78px;
+}
+
+.Yura_text {
+    font-size: 16px;
+    line-height: 30px;
+    padding: 20px 50px;
+
+    margin-left: 50px;
+
+    border-radius: 20px;
     background-color: #fff;
 }
 
-/* セクションごとの余白 */
 
-section {
-    padding: 100px 0;
+
+/* 図鑑全体部分 */
+
+
+
+.library__section {
+    background-color: #B258C9;
+    padding-top: 100px;
 }
 
 
-/* 各コンテンツタイトル */
-
-h3 {
+h2 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 50px;
 }
 
 
+
 /* 
     タイトル横ライン
 */
 
-.heading__odd , .heading__even {
+.artist__title {
+    color: #fff;
     align-items: center; /* 横線を上下中央 */
     display: flex; /* 文字と横線を横並び */
     justify-content: center; /* 文字を中央寄せ */
 }
 
-.heading__odd::before, .heading__odd::after {
+.artist__title::before, .artist__title::after {
     background-color: #D6E5FF; /* 横線の色 */
     content: "";
     height: 3px; /* 横線の高さ */
     width: 300px;
 }
 
-.heading__even::before, .heading__even::after {
-    background-color: #526AB2; /* 横線の色 */
-    content: "";
-    height: 3px; /* 横線の高さ */
-    width: 300px;
-}
-
-.heading__odd::before, .heading__even::before {
+.artist__title::before {
     margin-right: 15px; /* 文字との余白 */
 }
-.heading__odd::after, .heading__even::after {
-    margin-left: 15px; /* 文字との余白 */
-}
 
-
-  /* 色 */
-
-#schedule , #shift , #gallery {
-    color: #D6E5FF;
-}
-
-#consignment , #goods {
-    color: #526AB2;
-}
-
-/* 
-
-/* view more のcss */
-
-.view-more {
-    background-color: #F7C355; /* ボタンの背景色を設定 */
-    border-radius: 50px; /* ボタンの角を丸くする */
-    color: #ff8000; /* ボタンの文字色を白にする */
-    padding: 10px 60px; /* ボタンの内側の余白を設定 */
-    width: 210px;
-    font-size: 1.6rem; /* フォントサイズを設定 */
-    cursor: pointer; /* マウスカーソルをポインタにする */
-    transition: background-color 0.3s ease; /* 背景色の変更にアニメーションを設定 */
-}
-
-.view-more:hover {
-background-color: #ff8000; /* ホバー時の背景色を設定 */
-color: #F7C355;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-
-.business-hours-container {
-    padding: 10px;
-}
-
-}
-
-.business-hours, .view-more {
-    width: auto; /* 幅を自動調整にする */
-    margin: 10px auto; /* 自動的に中央揃えにする */
-}
-
-.button_wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-
+.artist__title::after {
+    margin-left: 15px;
+} 
 
 
 /* 
-    今月のスケジュール
+
+/* 
+
+    アーティストの世界紹介
+
 */
 
-.text {
+.artist__text {
+    font-size: 2rem;
+    line-height: 70px;
     text-align: center;
-    font-size: 1.6rem;
-    line-height: 30px;
-    margin-bottom: 50px;
+
+    color: #fff;
 }
 
-.schedule_Img > img {
-    background-color: #D6E5FF;
+.artist__text .text__large {
+    font-size: 3rem;
+}
+
+
+
+
+/* 大きな箱のスタイル */
+
+.artist__List {
+    display: flex; /* Flexboxレイアウトを有効化 */
+    flex-wrap: wrap; /* 項目を次の行に折り返す */
+    justify-content: space-between; /* 水平方向の中央揃え */
+    max-width: 1000px; /* コンテナの最大幅 */
+    margin: 0 auto; /* 親要素内でコンテナを中央に配置 */
+}
+
+
+/* アーティスト周りのスタイル */
+
+.artist__photo {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.artist__photo img {
     border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 50px;
 }
 
-.schedule_Img {
-    text-align: center;
+.artist__area {
+    position: relative;
 }
 
-@media screen and (max-width: 768px) {
+.artist__detail-wrapper {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    width: 250px;
 
-    .schedule_Img img {
-        width: 400px;
-        height: auto;
-        padding: 10px;
-    }
-    
-    .menberImg_wrapper img {
-        width: 112px;
-        height: auto;
-    }
-    
-    .menber_item {
-        margin: 5px;
-    }
+    position: absolute;
+    top: 180px;
+    left: 38px;
 }
 
-
-/* メンバーリスト */
-
-.menber_list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 700px;
-    margin: 0 auto;
+.artist__name {
+    font-size: 1.6rem;
 }
 
-.menber_item img {
-    border-radius: 5px;
-}
-
-.menber_item > .menberImg_wrapper {
-    background-color: #D6E5FF;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-.menber_item p {
+.artist__category {
     font-size: 1.4rem;
-    margin-bottom: 20px;
-}
-
-.menu_item > p > span {
-    float: right;
-}
-
-.menu_item {
-    margin-bottom: 30px;
 }
 
 
-/* 
-    オリジナルグッズ
-*/
+/* ゆらのcss */
 
-
-.past-events__list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.past-events__item img {
-    border-radius: 5px;
-}
-
-.past-events__item > .past-events__itemImg_wrapper {
-    background-color: #526AB2;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.past-events__item h4 {
-    font-size: 18px;
-    color: #526AB2;
-}
-
-.past-events__item p {
-    font-size: 16px;
-}
-
-.past-events__item {
-    margin-bottom: 30px;
-}
-
-
-/* 
-    ギャラリー　画像
-*/
-
-.odd_Imglist {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.Img260_odd > img {
-    border-radius: 5px;
-}
-
-.Img260_odd {
-    background-color: #D6E5FF;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 50px;
-}
 
 
 
@@ -632,7 +518,7 @@ footer {
     background-color: #DFEEFF;
 }
 
-#back-to-top svg:hover , span:hover {
+#back-to-top svg:hover , .back-to-top:hover {
     color: #F7C355;
 }
 
