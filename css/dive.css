@@ -1,3 +1,15 @@
+
+/* 
+
+    ポジションでアブソリュートをかけたい場合、
+    親要素の高さと横幅を指定しないといけない
+
+*/
+
+body {
+    background-color: #F7C355;
+}
+
 html {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 700;
@@ -7,7 +19,7 @@ html {
 
 /* headerのcss */
 
-body {
+.container_odd {
     background-color: #F7C355; 
     /* 全体の背景色を #F7C355 に設定 */
 }
@@ -267,42 +279,35 @@ color: #F7C355;
 }
 
 .archive__container {
-    max-width: 1000px;
+    width: 1000px;
     display: flex;
     justify-content: space-between;
-    position: relative; /* 位置指定の基準になる */
-    max-width: 1000px;
+    flex-wrap: wrap;
 }
 
-.archive__content {
+.archive__conrent {
     margin-bottom: 50px;
 }
 
 /* 画像とh4のcss */
 
-.archive__Img-box {
-    background-color: #FBF9EC;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 10px;
-    position: absolute;
-    top: 40px;
-}
-
-.archive__Img-box img {
-    border-radius: 5px;
+.archive_titleImg-box {
+    width: 280px;
+    height: 320px;
+    position: relative;
 }
 
 .archive__content-Title {
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     display: inline-block;
-    padding: 10px;
     background-color: transparent; /* 背景色を透明に設定 */
     color: #fff;
     font-size: 25px;
-    position: absolute; /* 絶対位置指定 */
-    z-index: 2; /* タイトルを前面に表示 */
+
+    /* 画像より上に持ってくるため */
+    position: relative;
+    z-index: 1;
 }
 
 .archive__content-Title span {
@@ -310,12 +315,26 @@ color: #F7C355;
     padding: 0 10px; /* パディングを左右に適用 */
 }
 
+
+
+.archive__Img-box {
+    background-color: #FBF9EC;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    /* ポジション */
+    position: absolute;
+    top: 10px;
+}
+
+.archive__Img-box img {
+    border-radius: 5px;
+}
+
+
 /* イベントタイトル系のcss */
 
-.archive__Text {
-    position: absolute;
-    top: 330px;
-}
 
 .archive__event-title {
     font-size: 20px;

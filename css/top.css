@@ -8,9 +8,13 @@ html {
 
 
 .top_header h1 {
-    width: 100%;
-    height: auto;
-    margin-bottom: 50px;
+    width: 100%; /* 親要素の幅を100%に設定 */
+    margin: 0 0 50px 0; /* 余白を取り除く */
+}
+
+.top_header h1 img {
+    width: 100%; /* 画像の幅を100%に設定 */
+    height: auto; /* 画像の高さを自動調整 */
 }
 
 
@@ -35,6 +39,58 @@ html {
     font-size: 14px;
     line-height: 30px;
 }
+
+
+
+/* トップページのボタン周り */
+
+
+.home_btn_wrapper {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.home_btn {
+    font-size: 2rem;
+    background-color: #D9D9D9;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.3s, width 0.3s, height 0.3s;
+    position: relative; /* 相対位置指定 */
+}
+
+.home_btn:hover {
+    background-color: #BFBFBF;
+    width: 200px;
+    height: 200px;
+}
+
+.btn_text {
+    display: none;
+    position: absolute;
+    bottom: -100px; /* 位置を調整 */
+    left: 50%; /* 親要素の中央に配置 */
+    transform: translateX(-50%); /* X軸方向に自身の幅の50%分左に移動 */
+    width: auto; /* 幅は自動 */
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 30px;
+}
+
+.home_btn:hover .btn_text {
+    display: block;
+}
+
+
+
+
 
 /* footer */
 
