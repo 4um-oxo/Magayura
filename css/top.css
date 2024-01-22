@@ -38,7 +38,9 @@ html {
 .home_textbox p {
     font-size: 14px;
     line-height: 30px;
+    margin-bottom: 50px;
 }
+
 
 
 
@@ -54,7 +56,7 @@ html {
 
 .home_btn {
     font-size: 2rem;
-    background-color: #D9D9D9;
+    background-color: #D9D9D9; /* デフォルトの背景色 */
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -63,34 +65,86 @@ html {
     justify-content: center;
     text-align: center;
     transition: background-color 0.3s, width 0.3s, height 0.3s;
-    position: relative; /* 相対位置指定 */
 }
 
+/* 各ボタンの特定の背景色 */
+.home_about {
+    color: #69A66F;
+}
+
+.home_dive {
+    color: #F7C355;
+}
+
+.home_bar {
+    color: #DA7D7D;
+}
+
+.home_library {
+    color: #B258C9;
+}
+
+.home_event {
+    color: #526AB2;
+}
+
+/* 各ボタンのホバー時のスタイル */
+.home_about:hover {
+    background-color: #69A66F;
+    color: #fff;
+}
+
+.home_dive:hover {
+    background-color: #F7C355;
+    color: #fff;
+}
+
+.home_bar:hover {
+    background-color: #DA7D7D;
+    color: #fff;
+}
+
+.home_library:hover {
+    background-color: #B258C9;
+    color: #fff;
+}
+
+.home_event:hover {
+    background-color: #526AB2;
+    color: #fff;
+}
+
+/* ホバー時のサイズ変更 */
 .home_btn:hover {
-    background-color: #BFBFBF;
     width: 200px;
     height: 200px;
 }
 
-.btn_text {
-    display: none;
-    position: absolute;
-    bottom: -100px; /* 位置を調整 */
-    left: 50%; /* 親要素の中央に配置 */
-    transform: translateX(-50%); /* X軸方向に自身の幅の50%分左に移動 */
-    width: auto; /* 幅は自動 */
+.btn__wrapper {
+    margin-bottom: 50px;
+}
+
+
+/* 
+
+    ホバーしたときのテキスト周り
+
+*/
+
+
+
+.hover__text {
+    max-width: 1000px;
+    margin: 0 auto;
     text-align: center;
     font-size: 1.4rem;
-    line-height: 30px;
+    line-height: 35px;
 }
 
-.home_btn:hover .btn_text {
-    display: block;
+#hoverTarget {
+    /* ホバー対象のスタイル */
+    cursor: pointer;
 }
-
-
-
-
 
 /* footer */
 

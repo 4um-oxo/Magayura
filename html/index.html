@@ -43,7 +43,7 @@
 
     <header class="top_header">
         <h1>
-            <img src="../images/デザイン_1/top_main.png" alt="" width="1200" height="600" >
+            <img src="../images/デザイン_1/top_mainphoto.png" alt="" width="1200" height="600" >
         </h1>
     </header>
 
@@ -67,38 +67,78 @@
     </section>
     
     <section>
-        <ul class="home_btn_wrapper">
-            <li class="home_about home_btn home_btn">
-                <a href="/html/06_about.html">
-                    About
-                </a>
-                <div class="btn_text">
-                    Aboutの説明がここに入ります。<br>
-                    Aboutの説明がここに入ります。<br>
-                    Aboutの説明がここに入ります。
+        <div class="btn__wrapper">
+            <ul class="home_btn_wrapper">
+                <li>
+                    <a href="/html/06_about.html" id="aboutButton" class="home_about home_btn">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/04_dive.html" id="diveButton" class="home_dive home_btn">
+                        DIVE
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/02_bar.html" id="barButton" class="home_bar home_btn">
+                        Bar
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/05_library.html" id="libraryButton" class="home_library home_btn">
+                        マガユラ図鑑
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/03_event.html" id="eventButton" class="home_event home_btn">
+                        Event
+                    </a>
+                </li>
+            </ul>
+    
+            <div class="hover__text">
+                <div id="aboutText" style="display:none;">
+                    <p>
+                        営業時間・住所
+                    </p>
                 </div>
-            </li>
-            <li class="home_dive">
-                <a class="home_btn" href="/html/04_dive.html">
-                    DIVE
-                </a>
-            </li>
-            <li class="home_bar">
-                <a class="home_btn" href="/html/02_bar.html">
-                    Bar
-                </a>
-            </li>
-            <li class="home_library">
-                <a class="home_btn" href="/html/05_library.html">
-                    マガユラ図鑑
-                </a>
-            </li>
-            <li  class="home_event home_btn">
-                <a class="home_btn" href="/html/03_event.html">
-                    Event
-                </a>
-            </li>
-        </ul>
+            </div>
+            <div class="hover__text">
+                <div id="diveText" style="display:none;">
+                    <p>
+                        グループ・個展プロジェクト <br>
+                    </p>
+                </div>
+            </div>
+            <div class="hover__text">
+                <div id="barText" style="display:none;">
+                    <p>
+                        個性的なスタッフと素敵なアートを <br>
+                        楽しみながら食事ができる <br>
+                        Bar Magayura
+                    </p>
+                </div>
+            </div>
+            <div class="hover__text">
+                <div id="libraryText" style="display:none;">
+                    <p>
+                        新しい世界を発見してみませんか？ <br>
+                        まだみたことのないアーティストに出会えるかも
+                    </p>
+                </div>
+            </div>
+            <div class="hover__text">
+                <div id="eventText" style="display:none;">
+                    <p>
+                        自分好みのイベントに参加することも <br>
+                        自分でイベントを開催することもできます。 <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+    
+
+        </div>
     </section>
 
     <!-- ここからfooter -->
@@ -133,7 +173,7 @@
                 <dl>
                     <dt>
                         <h5>
-                            <img src="../images/footer_Magayuralogo.png" alt="" width="220" height="61" >
+                            <img src="../images/magayura.png" alt="" width="220" height="61" >
                         </h5>
                     </dt>
                     <dd>
@@ -318,7 +358,7 @@
 <!-- jsファイル -->
 
 <script src="../script/nav.js"></script>
-<script src="../script/h2dive.js"></script>
+<script src="../script/about.js"></script>
 
 </body>
 </html>

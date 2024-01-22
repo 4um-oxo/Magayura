@@ -64,7 +64,7 @@ nav > ul > li.active a::after {
     transform: translateX(-50%);
     width: 100%; /* ラインの幅をリンクと同じに設定 */
     height: 5px; /* ラインの高さを設定 */
-    background-color: #F7C355; /* ラインの背景色を設定 */
+    background-color: #E16675; /* ラインの背景色を設定 */
     border-radius: 10px 10px 0 0; /* 上半分に角丸を設定 */
 }
 
@@ -131,7 +131,7 @@ nav > ul > li.active a::after {
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
-    color: #F7C355;
+    color: #E16675;
 }
 
 
@@ -216,7 +216,7 @@ h3 {
 /* view more のcss */
 
 .view-more {
-    background-color: #F7C355; /* ボタンの背景色を設定 */
+    background-color: #E16675; /* ボタンの背景色を設定 */
     border-radius: 50px; /* ボタンの角を丸くする */
     color: #ff8000; /* ボタンの文字色を白にする */
     padding: 10px 60px; /* ボタンの内側の余白を設定 */
@@ -228,7 +228,7 @@ h3 {
 
 .view-more:hover {
 background-color: #ff8000; /* ホバー時の背景色を設定 */
-color: #F7C355;
+color: #E16675;
 }
 
 /* レスポンシブ対応 */
@@ -392,6 +392,7 @@ color: #F7C355;
 
 
 
+
 /* お問い合わせ */
 
 #inquiry {
@@ -403,25 +404,40 @@ color: #F7C355;
 }
 
 .inquiry__banner__wrapper p {
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 1.4rem;
 }
 
 .inquiry__text {
-    display: flex;
-    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-
-/* 2番目のinquiry__banner__wrapperに続くinquiry__textをターゲットにする */
-.inquiry__banner__wrapper:nth-of-type(2) + .inquiry__text {
-    justify-content: flex-start;
-    text-align: left;
+.inquiry__text p {
+    text-align: center;
+    font-size: 1.4rem;
 }
 
-/* 2番目のinquiry__banner__wrapper内のsvgとpのマージンを調整 */
-.inquiry__banner__wrapper:nth-of-type(2) svg,
-.inquiry__banner__wrapper:nth-of-type(2) p {
-    margin: 10px;
+/* 
+    お問い合わせ横ライン
+*/
+
+.inquiry__title {
+    display: flex; /* フレックスコンテナにする */
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #254298;
+}
+
+.inquiry__title::before,
+.inquiry__title::after {
+    content: ""; /* 必須 */
+    background-color: #254298; /* 横線の色 */
+    height: 3px; /* 横線の厚さ */
+    width: 300px;
+    margin: 0 15px; /* `h3` 要素との余白 */
 }
 
 
@@ -622,7 +638,7 @@ footer {
     right: 20px;
     cursor: pointer;
     text-align: center; /* テキストとSVGを中央揃えにする */
-    background-color: #F7C355; /* 背景色を設定 */
+    background-color: #E16675; /* 背景色を設定 */
     border-radius: 50%; /* 正円の形にする */
     padding: 15px 20px; /* 上下に9px、左右に17pxの余白を設定 */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
@@ -633,7 +649,7 @@ footer {
 }
 
 #back-to-top svg:hover , span:hover {
-    color: #F7C355;
+    color: #E16675;
 }
 
     

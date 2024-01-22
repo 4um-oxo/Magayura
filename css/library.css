@@ -8,8 +8,8 @@ html {
 /* headerのcss */
 
 body {
-    background-color: #526AB2; 
-    /* 全体の背景色を #526AB2 に設定 */
+    background-color: #B258C9; 
+    /* 全体の背景色を #B258C9 に設定 */
 }
 
 /* headerの背景 */
@@ -34,7 +34,7 @@ header {
 }
 
 .nav_wrapper {
-    background-color: #526AB2;
+    background-color: #B258C9;
     color: #fff;
     font-size: 1.4rem;
     font-style: bold;
@@ -64,7 +64,7 @@ nav > ul > li.active a::after {
     transform: translateX(-50%);
     width: 100%; /* ラインの幅をリンクと同じに設定 */
     height: 5px; /* ラインの高さを設定 */
-    background-color: #F7C355; /* ラインの背景色を設定 */
+    background-color: #55C7FF; /* ラインの背景色を設定 */
     border-radius: 10px 10px 0 0; /* 上半分に角丸を設定 */
 }
 
@@ -188,7 +188,7 @@ h2 {
 }
 
 .artist__title::before, .artist__title::after {
-    background-color: #D6E5FF; /* 横線の色 */
+    background-color: #fff; /* 横線の色 */
     content: "";
     height: 3px; /* 横線の高さ */
     width: 300px;
@@ -224,6 +224,10 @@ h2 {
 }
 
 
+.arteist__container {
+    padding-bottom: 100px;
+}
+
 
 
 /* 大きな箱のスタイル */
@@ -234,34 +238,111 @@ h2 {
     justify-content: space-between; /* 水平方向の中央揃え */
     max-width: 1000px; /* コンテナの最大幅 */
     margin: 0 auto; /* 親要素内でコンテナを中央に配置 */
+    padding-bottom: 50px;
 }
 
 
 /* アーティスト周りのスタイル */
 
+.artist__area {
+    /* ポジションアブソリュートのためのスタイル */
+    position: relative;
+    width: 270px;
+    height: 250px;
+
+    /*  */
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.artist__photo__wrapper {
+    width: 270px;
+    height: 600px;
+}
+
 .artist__photo {
     background-color: #fff;
     padding: 10px;
     border-radius: 30px;
+
+    /* ポジション */
+    position: absolute;
+    top: 50px;
 }
 
 .artist__photo img {
     border-radius: 20px;
 }
 
-.artist__area {
-    position: relative;
+/* ゆらの位置 */
+
+.yura_1 {
+    background-image: url(../images/01_Yura.png);
+    background-repeat: no-repeat;
+    background-position: 220px 190px;
+    background-size: 50px 50px;
 }
 
+.yura_2 {
+    background-image: url(../images/02_Yura.png);
+    background-repeat: no-repeat;
+    background-position: 10px 260px;
+    background-size: 59px 37px;
+}
+
+.yura_3 {
+    background-image: url(../images/03_Yura.png);
+    background-repeat: no-repeat;
+    background-position: 19px 260px;
+    background-size: 52px 33px;
+}
+
+.yura_4 {
+    background-image: url(../images/04_Yura.png);
+    background-repeat: no-repeat;
+    background-position: 200px 100px;
+    background-size: 50px 64px;
+}
+
+.yura_5 {
+    background-image: url(../images/06_Yura.png);
+    background-repeat: no-repeat;
+    background-position: 220px 180px;
+    background-size: 45px 51px;
+}
+
+.yura_6 {
+    background-image: url(../images/05_Yura.png);
+    background-repeat: no-repeat;
+    background-position: 220px 100px;
+    background-size: 50px 73px;
+}
+
+/* 
+
+    アーティストの名前・ジャンル周りのスタイル
+
+*/
+
 .artist__detail-wrapper {
+    width: 200px;
+    height: 80px;
     background-color: #fff;
-    padding: 15px;
     border-radius: 20px;
-    width: 250px;
+    padding: 10px;
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    /* ポジション */
 
     position: absolute;
-    top: 180px;
-    left: 38px;
+    left: 70px;
+    top: 220px;
+    z-index: 2;
 }
 
 .artist__name {
@@ -273,6 +354,7 @@ h2 {
 }
 
 
+
 /* ゆらのcss */
 
 
@@ -282,6 +364,9 @@ h2 {
 
 #inquiry {
     text-align: center;
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .inquiry__banner__wrapper {
@@ -289,26 +374,43 @@ h2 {
 }
 
 .inquiry__banner__wrapper p {
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 1.4rem;
 }
 
 .inquiry__text {
-    display: flex;
-    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.inquiry__text p {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/* 
+    お問い合わせ横ライン
+*/
+
+.inquiry__title {
+    display: flex; /* フレックスコンテナにする */
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #254298;
+}
+
+.inquiry__title::before,
+.inquiry__title::after {
+    content: ""; /* 必須 */
+    background-color: #254298; /* 横線の色 */
+    height: 3px; /* 横線の厚さ */
+    width: 300px;
+    margin: 0 15px; /* `h3` 要素との余白 */
 }
 
 
-/* 2番目のinquiry__banner__wrapperに続くinquiry__textをターゲットにする */
-.inquiry__banner__wrapper:nth-of-type(2) + .inquiry__text {
-    justify-content: flex-start;
-    text-align: left;
-}
-
-/* 2番目のinquiry__banner__wrapper内のsvgとpのマージンを調整 */
-.inquiry__banner__wrapper:nth-of-type(2) svg,
-.inquiry__banner__wrapper:nth-of-type(2) p {
-    margin: 10px;
-}
 
 
 /* footer */
@@ -317,7 +419,7 @@ h2 {
 
 footer {
     background-color: #F0F0F0;
-    color: #526AB2;
+    color: #B258C9;
     padding-top: 50px;
 }
 
@@ -333,7 +435,7 @@ footer {
 
 
 .social-links__icon {
-    background-color: #526AB2;
+    background-color: #B258C9;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -404,7 +506,7 @@ footer {
 /* コピーライト */
 
 .copyright {
-    background-color: #526AB2;
+    background-color: #B258C9;
     margin-top: 50px;
     padding: 10px;
     width: 100%; /* これを追加 */
@@ -508,18 +610,18 @@ footer {
     right: 20px;
     cursor: pointer;
     text-align: center; /* テキストとSVGを中央揃えにする */
-    background-color: #F7C355; /* 背景色を設定 */
+    background-color: #55C7FF; /* 背景色を設定 */
     border-radius: 50%; /* 正円の形にする */
     padding: 15px 20px; /* 上下に9px、左右に17pxの余白を設定 */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
 }
 
 #back-to-top:hover {
-    background-color: #DFEEFF;
+    background-color: #55C7FF;
 }
 
 #back-to-top svg:hover , .back-to-top:hover {
-    color: #F7C355;
+    color: #55C7FF;
 }
 
     

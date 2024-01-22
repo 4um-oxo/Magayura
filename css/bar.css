@@ -298,42 +298,55 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
     font-size: 2rem; /* フォントサイズを設定 */
 }
 
+
+
 /* view more のcss */
 
-.view-more {
-    background-color: #526AB2; /* ボタンの背景色を設定 */
-    border-radius: 50px; /* ボタンの角を丸くする */
-    color: #DFEEFF; /* ボタンの文字色を白にする */
-    padding: 10px 60px; /* ボタンの内側の余白を設定 */
-    width: 210px;
-    font-size: 1.6rem; /* フォントサイズを設定 */
-    cursor: pointer; /* マウスカーソルをポインタにする */
-    transition: background-color 0.3s ease; /* 背景色の変更にアニメーションを設定 */
+/* 019 */
+.button019 a {
+    background: #526AB2;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center; /* テキストを中央に配置 */
+    align-items: center;
+    margin: 0 auto;
+    width: 210px; /* 幅を210pxに設定 */
+    height: 50px; /* 高さを50pxに設定 */
+    padding: 10px 25px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    text-decoration: none; /* リンクの下線を除去 */
+
+    font-size: 1.6rem;
 }
 
-.view-more:hover {
-background-color: #DFEEFF; /* ホバー時の背景色を設定 */
-color: #526AB2;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-
-.business-hours-container {
-    padding: 10px;
-}
-
-}
-
-.business-hours, .view-more {
-    width: auto; /* 幅を自動調整にする */
-    margin: 10px auto; /* 自動的に中央揃えにする */
-}
-
-.button_wrapper {
+.button019 a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px; /* ボタンの右端からの距離を調整 */
     display: flex;
     justify-content: center;
+    align-items: center;
+    transition: right 0.3s;
+    width: 6px;
+    height: 6px;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+    transform: translateY(-50%) rotate(45deg);
 }
+
+.button019 a:hover {
+    background: #6bb6ff;
+    color: #FFF;
+}
+
+.button019 a:hover:after {
+    right: 15px; /* ホバー時に矢印を移動 */
+}
+
 
 
 /* 
@@ -522,6 +535,7 @@ color: #526AB2;
 
 
 
+
 /* お問い合わせ */
 
 #inquiry {
@@ -533,26 +547,43 @@ color: #526AB2;
 }
 
 .inquiry__banner__wrapper p {
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 1.4rem;
 }
 
 .inquiry__text {
-    display: flex;
-    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.inquiry__text p {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/* 
+    お問い合わせ横ライン
+*/
+
+.inquiry__title {
+    display: flex; /* フレックスコンテナにする */
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #254298;
+}
+
+.inquiry__title::before,
+.inquiry__title::after {
+    content: ""; /* 必須 */
+    background-color: #254298; /* 横線の色 */
+    height: 3px; /* 横線の厚さ */
+    width: 300px;
+    margin: 0 15px; /* `h3` 要素との余白 */
 }
 
 
-/* 2番目のinquiry__banner__wrapperに続くinquiry__textをターゲットにする */
-.inquiry__banner__wrapper:nth-of-type(2) + .inquiry__text {
-    justify-content: flex-start;
-    text-align: left;
-}
-
-/* 2番目のinquiry__banner__wrapper内のsvgとpのマージンを調整 */
-.inquiry__banner__wrapper:nth-of-type(2) svg,
-.inquiry__banner__wrapper:nth-of-type(2) p {
-    margin: 10px;
-}
 
 
 /* footer */

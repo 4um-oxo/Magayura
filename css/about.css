@@ -180,7 +180,7 @@ h3 {
 }
 
 .heading__odd::before, .heading__odd::after {
-    background-color: #D6E5FF; /* 横線の色 */
+    background-color: #fff; /* 横線の色 */
     content: "";
     height: 3px; /* 横線の高さ */
     width: 300px;
@@ -200,194 +200,109 @@ h3 {
     margin-left: 15px; /* 文字との余白 */
 }
 
-
-  /* 色 */
-
-#schedule , #shift , #gallery {
-    color: #D6E5FF;
+.heading__odd{
+    color: #fff;
 }
 
-#consignment , #goods {
+.heading__even {
     color: #69A66F;
 }
 
 /* 
 
-/* view more のcss */
-
-.view-more {
-    background-color: #F7C355; /* ボタンの背景色を設定 */
-    border-radius: 50px; /* ボタンの角を丸くする */
-    color: #ff8000; /* ボタンの文字色を白にする */
-    padding: 10px 60px; /* ボタンの内側の余白を設定 */
-    width: 210px;
-    font-size: 1.6rem; /* フォントサイズを設定 */
-    cursor: pointer; /* マウスカーソルをポインタにする */
-    transition: background-color 0.3s ease; /* 背景色の変更にアニメーションを設定 */
-}
-
-.view-more:hover {
-background-color: #ff8000; /* ホバー時の背景色を設定 */
-color: #F7C355;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-
-.business-hours-container {
-    padding: 10px;
-}
-
-}
-
-.business-hours, .view-more {
-    width: auto; /* 幅を自動調整にする */
-    margin: 10px auto; /* 自動的に中央揃えにする */
-}
-
-.button_wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-
-
-
 /* 
-    今月のスケジュール
+
+    店舗情報のレイアウト
+
 */
 
-.text {
-    text-align: center;
+
+.googlemap {
+    margin-bottom: 50px;
+}
+
+.information__wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center; /* すべてのテキストを中央揃えにする */
+    display: flex; /* フレックスボックスコンテナとして設定 */
+    flex-direction: column; /* 子要素を縦方向に並べる */
+    align-items: center; /* 水平方向の中央揃え */
+    justify-content: center; /* 垂直方向の中央揃え */
+}
+
+.information__logo {
+    margin-bottom: 50px;
+}
+
+
+.information__list {
     font-size: 1.6rem;
-    line-height: 30px;
-    margin-bottom: 50px;
-}
+    color: #fff;
+    line-height: 24px;
+    font-weight: 500;
 
-.schedule_Img > img {
-    background-color: #D6E5FF;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 50px;
-}
-
-.schedule_Img {
-    text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-
-    .schedule_Img img {
-        width: 400px;
-        height: auto;
-        padding: 10px;
-    }
-    
-    .menberImg_wrapper img {
-        width: 112px;
-        height: auto;
-    }
-    
-    .menber_item {
-        margin: 5px;
-    }
-}
-
-
-/* メンバーリスト */
-
-.menber_list {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 700px;
-    margin: 0 auto;
+    width: 100%;  
 }
 
-.menber_item img {
-    border-radius: 5px;
+.information__list1 {
+    border-top: 2px solid #fff; /* 上端に白色の2pxのボーダーを追加 */
+    border-bottom: 2px solid #fff; /* 下端に白色の2pxのボーダーを追加 */
 }
 
-.menber_item > .menberImg_wrapper {
-    background-color: #D6E5FF;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 10px;
+.information__list2 {
+    border-bottom: 2px solid #fff; /* 下端に白色の2pxのボーダーを追加 */
 }
 
-.menber_item p {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
+.information__list >dt {
+    width: 30%;
+    padding: 10px;
 }
 
-.menu_item > p > span {
-    float: right;
-}
-
-.menu_item {
-    margin-bottom: 30px;
+.information__list > dd {
+    width: 70%;
+    padding: 10px;
+    text-align: left;
 }
 
 
-/* 
-    オリジナルグッズ
-*/
-
-
-.past-events__list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.accses__wrapper {
     max-width: 1000px;
     margin: 0 auto;
+    text-align: center; /* すべてのテキストを中央揃えにする */
+    display: flex; /* フレックスボックスコンテナとして設定 */
+    flex-direction: column; /* 子要素を縦方向に並べる */
+    align-items: center; /* 水平方向の中央揃え */
+    justify-content: center; /* 垂直方向の中央揃え */
 }
 
-.past-events__item img {
-    border-radius: 5px;
-}
+.access__list {
+    font-size: 1.6rem;
+    color: #000f;
+    line-height: 24px;
+    font-weight: 500;
 
-.past-events__item > .past-events__itemImg_wrapper {
-    background-color: #69A66F;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.past-events__item h4 {
-    font-size: 18px;
-    color: #69A66F;
-}
-
-.past-events__item p {
-    font-size: 16px;
-}
-
-.past-events__item {
-    margin-bottom: 30px;
-}
-
-
-/* 
-    ギャラリー　画像
-*/
-
-.odd_Imglist {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
+    width: 100%;  
 }
 
-.Img260_odd > img {
-    border-radius: 5px;
+.access__list1 {
+    border-bottom: 2px solid #69A66F; /* 下端に白色の2pxのボーダーを追加 */
 }
 
-.Img260_odd {
-    background-color: #D6E5FF;
-    border-radius: 10px;
+
+.access__list >dt {
+    width: 30%;
     padding: 10px;
-    margin-bottom: 50px;
+}
+
+.access__list > dd {
+    width: 70%;
+    padding: 10px;
+    text-align: left;
 }
 
 
@@ -403,26 +318,45 @@ color: #F7C355;
 }
 
 .inquiry__banner__wrapper p {
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 1.4rem;
 }
 
 .inquiry__text {
-    display: flex;
-    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.inquiry__text p {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/* 
+    お問い合わせ横ライン
+*/
+
+.inquiry__title {
+    display: flex; /* フレックスコンテナにする */
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #254298;
+}
+
+.inquiry__title::before,
+.inquiry__title::after {
+    content: ""; /* 必須 */
+    background-color: #254298; /* 横線の色 */
+    height: 3px; /* 横線の厚さ */
+    width: 300px;
+    margin: 0 15px; /* `h3` 要素との余白 */
 }
 
 
-/* 2番目のinquiry__banner__wrapperに続くinquiry__textをターゲットにする */
-.inquiry__banner__wrapper:nth-of-type(2) + .inquiry__text {
-    justify-content: flex-start;
-    text-align: left;
-}
 
-/* 2番目のinquiry__banner__wrapper内のsvgとpのマージンを調整 */
-.inquiry__banner__wrapper:nth-of-type(2) svg,
-.inquiry__banner__wrapper:nth-of-type(2) p {
-    margin: 10px;
-}
+
 
 
 /* footer */

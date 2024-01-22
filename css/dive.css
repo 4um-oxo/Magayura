@@ -361,26 +361,42 @@ color: #F7C355;
 }
 
 .inquiry__banner__wrapper p {
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 1.4rem;
 }
 
 .inquiry__text {
-    display: flex;
-    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-
-/* 2番目のinquiry__banner__wrapperに続くinquiry__textをターゲットにする */
-.inquiry__banner__wrapper:nth-of-type(2) + .inquiry__text {
-    justify-content: flex-start;
-    text-align: left;
+.inquiry__text p {
+    text-align: center;
+    font-size: 1.4rem;
 }
 
-/* 2番目のinquiry__banner__wrapper内のsvgとpのマージンを調整 */
-.inquiry__banner__wrapper:nth-of-type(2) svg,
-.inquiry__banner__wrapper:nth-of-type(2) p {
-    margin: 10px;
+/* 
+    お問い合わせ横ライン
+*/
+
+.inquiry__title {
+    display: flex; /* フレックスコンテナにする */
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #254298;
 }
+
+.inquiry__title::before,
+.inquiry__title::after {
+    content: ""; /* 必須 */
+    background-color: #254298; /* 横線の色 */
+    height: 3px; /* 横線の厚さ */
+    width: 300px;
+    margin: 0 15px; /* `h3` 要素との余白 */
+}
+
 
 
 /* footer */
@@ -389,7 +405,7 @@ color: #F7C355;
 
 footer {
     background-color: #F0F0F0;
-    color: #F7C355;
+    color: #E95039;
     padding-top: 50px;
 }
 
@@ -405,7 +421,7 @@ footer {
 
 
 .social-links__icon {
-    background-color: #F7C355;
+    background-color: #E95039;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -476,7 +492,7 @@ footer {
 /* コピーライト */
 
 .copyright {
-    background-color: #F7C355;
+    background-color: #E95039;
     margin-top: 50px;
     padding: 10px;
     width: 100%; /* これを追加 */
@@ -580,7 +596,7 @@ footer {
     right: 20px;
     cursor: pointer;
     text-align: center; /* テキストとSVGを中央揃えにする */
-    background-color: #F7C355; /* 背景色を設定 */
+    background-color: #E95039; /* 背景色を設定 */
     border-radius: 50%; /* 正円の形にする */
     padding: 15px 20px; /* 上下に9px、左右に17pxの余白を設定 */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
@@ -621,6 +637,65 @@ footer {
     height: 16px; /* SVGの高さを小さくする */
     }
     #back-to-top .back-to-top_text {
+    font-size: 10px; /* テキストのサイズを小さくする */
+    }
+    }
+/***トップへ戻るボタンここまで***/
+
+
+/* 
+    インスタフォローしてねのボタン
+*/
+
+/***追従するトップへ戻るボタン***/
+#follow-us__inst {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+    text-align: center; /* テキストとSVGを中央揃えにする */
+    background-color: #E95039; /* 背景色を設定 */
+    border-radius: 50%; /* 正円の形にする */
+    padding: 40px; /* 上下に9px、左右に17pxの余白を設定 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
+}
+
+#follow-us__inst:hover {
+    background-color: #DFEEFF;
+}
+
+#follow-us__inst svg:hover , .follow_text:hover {
+    color: #F7C355;
+}
+
+    
+#follow-us__inst svg {
+    /* SVGのサイズや余白の調整 */
+    width: 50px; /* SVGの幅を設定 */
+    height: 50px; /* SVGの高さを設定 */
+    margin-bottom: 5px; /* SVGとテキストの間の余白 */
+    }
+    
+    #follow-us__inst .follow_text {
+    display: block; /* ブロック要素として表示 */
+    color: white; /* 文字色を白に */
+    font-size: 1.6rem; /* 文字サイズを適宜調整 */
+    font-weight: bold; /* 文字を太字に */
+    padding-bottom: 10px;
+    }
+    
+    /* 画面の小さいデバイスで見たときにボタンが大きすぎないように調整する */
+    @media (max-width: 600px) {
+    #follow-us__inst {
+    padding: 20px; /* 小さいデバイスでは全体的に余白を減らす */
+    bottom: 10px;
+    right: 10px;
+    }
+    #follow-us__inst svg {
+    width: 24px; /* SVGの幅を小さくする */
+    height: 16px; /* SVGの高さを小さくする */
+    }
+    #follow-us__inst .follow_text {
     font-size: 10px; /* テキストのサイズを小さくする */
     }
     }

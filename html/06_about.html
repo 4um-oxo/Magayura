@@ -104,10 +104,10 @@
         <div class="page_title_box">
 
                 <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.0243432 14.0908C-0.0854839 16.0021 0.173542 17.9176 0.857369 19.6911C1.58264 21.5706 2.75344 23.2615 4.23092 24.6007C5.89905 26.1157 7.93602 26.5755 9.77822 27.7748C11.2433 28.7283 12.4141 30.1607 12.814 31.9173C13.2181 33.6888 12.7539 36.1128 11.1811 37.185C9.98129 38.0029 8.67166 38.1766 7.35166 38.6576C5.41208 39.3654 6.14563 42.0377 8.07692 41.9996C15.9948 41.8428 23.6371 38.5496 27.3402 31.0465C30.8567 23.9226 31.0618 13.667 26.8988 6.76567C22.199 -1.01716 11.1749 -2.24402 4.64536 3.91147C1.93492 6.46901 0.241925 10.2661 0.0243432 14.0908Z" fill="#526AB2"/>
+                    <path d="M0.0243432 14.0908C-0.0854839 16.0021 0.173542 17.9176 0.857369 19.6911C1.58264 21.5706 2.75344 23.2615 4.23092 24.6007C5.89905 26.1157 7.93602 26.5755 9.77822 27.7748C11.2433 28.7283 12.4141 30.1607 12.814 31.9173C13.2181 33.6888 12.7539 36.1128 11.1811 37.185C9.98129 38.0029 8.67166 38.1766 7.35166 38.6576C5.41208 39.3654 6.14563 42.0377 8.07692 41.9996C15.9948 41.8428 23.6371 38.5496 27.3402 31.0465C30.8567 23.9226 31.0618 13.667 26.8988 6.76567C22.199 -1.01716 11.1749 -2.24402 4.64536 3.91147C1.93492 6.46901 0.241925 10.2661 0.0243432 14.0908Z" fill="#F7C355"/>
                 </svg>
             <h2 id="page_title">
-                Bar
+                About
             </h2>
 
         </div>
@@ -115,139 +115,122 @@
 
     <section>
         
-        <h3 id="information">
+        <h3 id="information" class="heading__odd">
             店舗情報
         </h3>
 
         <!-- logo -->
-        <div>
-            <img src="../images/about_logo.png" alt="" width="404" height="112" >
-        </div>
+        <div class="information__wrapper">
+            <div class="information__logo">
+                <img src="../images/about_logo.png" alt="" width="404" height="112" >
+            </div>
 
-        <!-- Google Map -->
-        <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.6304098810374!2d135.47231647603508!3d34.689276272923784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d7e8129929%3A0x81d5c2ea5ba3e55!2sLive-art-bar%20MagaYura!5e0!3m2!1sja!2sjp!4v1705146059026!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        
-        <dl>
+            <!-- Google Map -->
+            <div class="googlemap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.6304098810374!2d135.47231647603508!3d34.689276272923784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d7e8129929%3A0x81d5c2ea5ba3e55!2sLive-art-bar%20MagaYura!5e0!3m2!1sja!2sjp!4v1705146059026!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             
-            <!-- 住所 -->
-            <dt>
-                住所
-            </dt>
-            <dd>
-                <p>
-                    〒553-0006 大阪市福島区吉野3丁目7-7 富岡ビル2/3F
-                    ※JR野田駅改札を出て左手、たこ焼きじゃんぼ総本店の上階です。
-                </p>
-            </dd>
+                <dl class="information__list information__list1">                
+                    <!-- 住所 -->
+                    <dt>
+                        住　　所
+                    </dt>
+                    <dd>
+                        <p>
+                            〒553-0006 大阪市福島区吉野3丁目7-7 富岡ビル2/3F <br>
+                            ※JR野田駅改札を出て左手、たこ焼きじゃんぼ総本店の上階です。
+                        </p>
+                    </dd>
+                </dl>
 
-            <!-- 電話番号 -->
-            <dt>
-                住所
-            </dt>
-            <dd>
-                <a href="tel:0661804191">
-                    TEL:06-6180-4191
-                </a>
-            </dd>
+                <dl class="information__list information__list2">                
+                    <!-- 電話番号 -->
+                    <dt>
+                        電話番号
+                    </dt>
+                    <dd>
+                        <p>
+                            06-6180-4191
+                        </p>
+                    </dd>
+                </dl>
 
-            <!-- 営業時間 -->
-            <dt>
-                営業時間
-            </dt>
-            <dd>
-                <p>
-                    17:00〜24:00
-                </p>
-            </dd>
-
-        </dl>
+                <dl class="information__list information__list2">                
+                    <!-- 営業時間 -->
+                    <dt>
+                        営業時間
+                    </dt>
+                    <dd>
+                        <p>
+                            17:00〜24:00
+                        </p>
+                    </dd>
+                </dl>
+            
     </section>
 
     <section class="container_even">
-        <h3>
+        <h3 class="heading__even">
             アクセス
         </h3>
 
-        <dl>
+        <div class="accses__wrapper">
+                <dl class="access__list access__list1">                
+                    <!-- 電車でお越しの方 -->
+                    <dt>
+                        電車でお越しの方
+                    </dt>
+                    <dd>
+                        <p>
+                            大阪環状線 野田駅 改札より 徒歩5秒 <br>
+                            地下鉄千日前線 玉川駅 4番出口より 徒歩2分 <br>
+                            阪神電鉄 野田阪神駅 改札より 徒歩10分
+                        </p>
+                    </dd>
+                </dl>
 
-            <!-- 電車でお越しの方 -->
-            <dt>
-                <p>
-                    電車でお越しの方
-                </p>
-            </dt>
-            <dd>
-                <p>
-                    大阪環状線 野田駅 改札より 徒歩5秒
-                    地下鉄千日前線 玉川駅 4番出口より 徒歩2分
-                    阪神電鉄 野田阪神駅 改札より 徒歩10分
-                </p>
-            </dd>
+                <dl class="access__list access__list1">                
+                    <!-- お車でお越しの方 -->
+                    <dt>
+                        お車でお越しの方
+                    </dt>
+                    <dd>
+                        <p>
+                            専用駐車場はございません。 <br>
+                            周辺にパーキングがございます。 
+                        </p>
+                    </dd>
+                </dl>
+        </div>
 
-            <!-- お車でお越しの方 -->
-            <dt>
-                <p>
-                    お車でお越しの方
-                </p>
-            </dt>
-            <dd>
-                <p>
-                    専用駐車場はございません。
-                    周辺にパーキングがございます。
-                </p>
-            </dd>
-
-        </dl>
     </section>
 
 
 
     <!-- お問い合わせ -->
     <section id="inquiry">
-        <h3>
+        <h3 class="inquiry__title">
             お問い合わせ
         </h3>
 
         <!-- マガユラへのお問い合わせ -->
         <div class="inquiry__wrapper">
             <div class="inquiry__banner__wrapper">
-                <svg width="920" height="220" viewBox="0 0 920 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="5" y="5" width="910" height="210" stroke="#F7C355" stroke-width="10" stroke-linejoin="round"/>
-                    <rect x="910" y="210" width="900" height="10.2564" transform="rotate(-180 910 210)" fill="#254298"/>
-                    <rect x="910" y="199.744" width="900" height="6.93814" transform="rotate(-180 910 199.744)" fill="#286781"/>
-                    <rect x="910" y="192.805" width="900" height="10.2564" transform="rotate(-180 910 192.805)" fill="#608351"/>
-                    <rect x="910" y="182.549" width="900" height="7.54146" transform="rotate(-180 910 182.549)" fill="#E8631F"/>
-                    <rect x="10" y="10" width="900" height="10.2564" fill="#254298"/>
-                    <rect x="10" y="20.2559" width="900" height="6.93811" fill="#286781"/>
-                    <rect x="10" y="27.1953" width="900" height="10.2564" fill="#608351"/>
-                    <rect x="10" y="37.4512" width="900" height="7.54142" fill="#E8631F"/>
-                    <rect x="10" y="44.9922" width="900" height="14.178" fill="#F6A119"/>
-                    <rect x="10" y="59.1699" width="900" height="101.659" fill="#F7C355"/>
-                    <rect x="910" y="175.008" width="900" height="14.1779" transform="rotate(-180 910 175.008)" fill="#F6A119"/>
-                    </svg>                               
+                <img src="../images/info_magayura.png" alt="" width="900" height="200" >
             </div>
 
         <!-- イベント関係のお問い合わせ -->
             <div class="inquiry__banner__wrapper">
-                <svg width="920" height="220" viewBox="0 0 920 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="5" y="5" width="910" height="210" stroke="#F7C355" stroke-width="10" stroke-linejoin="round"/>
-                    <rect x="910" y="210" width="900" height="10.2564" transform="rotate(-180 910 210)" fill="#254298"/>
-                    <rect x="910" y="199.744" width="900" height="6.93814" transform="rotate(-180 910 199.744)" fill="#286781"/>
-                    <rect x="910" y="192.805" width="900" height="10.2564" transform="rotate(-180 910 192.805)" fill="#608351"/>
-                    <rect x="910" y="182.549" width="900" height="7.54146" transform="rotate(-180 910 182.549)" fill="#E8631F"/>
-                    <rect x="10" y="10" width="900" height="10.2564" fill="#254298"/>
-                    <rect x="10" y="20.2559" width="900" height="6.93811" fill="#286781"/>
-                    <rect x="10" y="27.1953" width="900" height="10.2564" fill="#608351"/>
-                    <rect x="10" y="37.4512" width="900" height="7.54142" fill="#E8631F"/>
-                    <rect x="10" y="44.9922" width="900" height="14.178" fill="#F6A119"/>
-                    <rect x="10" y="59.1699" width="900" height="101.659" fill="#F7C355"/>
-                    <rect x="910" y="175.008" width="900" height="14.1779" transform="rotate(-180 910 175.008)" fill="#F6A119"/>
-                    </svg>
-                    <p class="inquiry__text">
-                        出演や出店、レンタルに関するお問い合わせも随時受け付けております。何かご不明点やご要望がございましたら、お気軽にお知らせください。
-                    </p>
+                <img src="../images/info_event.png" alt="" width="900" height="200" >
+                <p>
+                    確実なお席の確保のためイベントカレンダーをご確認いただき、必要事項をご記入いただき、お問い合わせください。 <br>
+                    お名前 / メールアドレス / ご予約人数 / ご来場希望アーティト
+                </p>
+            </div>
+            <div class="inquiry__text">
+                <p>
+                    出演や出店、レンタルに関するお問い合わせも随時受け付けております。何かご不明点やご要望がございましたら、お気軽にお知らせください。
+                </p>
             </div>
         </div>
 
@@ -285,7 +268,7 @@
                 <dl>
                     <dt>
                         <h5>
-                            <img src="../images/footer_Magayuralogo.png" alt="" width="220" height="61" >
+                            <img src="../images/magayura.png" alt="" width="220" height="61" >
                         </h5>
                     </dt>
                     <dd>
