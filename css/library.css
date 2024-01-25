@@ -350,12 +350,42 @@ h2 {
 }
 
 .artist__category {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 
+/* SNSアイコン */
 
-/* ゆらのcss */
+
+/* スタッフのSNSのスタイル調整 */
+.artist_sns {
+    position: relative;
+    width: 250px;
+    height: 45px;
+    display: flex;
+    justify-content: flex-end; /* 右寄せに変更 */
+    z-index: 2;
+    
+    position: absolute;
+    top: 60px;
+    right: 60px;
+}
+
+.artist_sns__icon {
+    background-color: #55C7FF;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* 円形にする */
+    display: flex; /* SVGを中央に配置するための設定 */
+    justify-content: center;
+    align-items: center;
+}
+
+.artist_sns__icon-wrapper:not(:last-child) {
+    margin-right: 5px; /* 最後の要素以外に右側の余白を追加 */
+}
+
+
 
 
 

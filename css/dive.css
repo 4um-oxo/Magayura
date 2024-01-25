@@ -193,7 +193,7 @@ h3 {
 }
 
 .heading__odd::before, .heading__odd::after {
-    background-color: #D6E5FF; /* 横線の色 */
+    background-color: #fff; /* 横線の色 */
     content: "";
     height: 3px; /* 横線の高さ */
     width: 300px;
@@ -216,13 +216,10 @@ h3 {
 
   /* 色 */
 
-#schedule , #shift , #gallery {
-    color: #D6E5FF;
+#archives {
+    color: #fff;
 }
 
-#consignment , #goods {
-    color: #F7C355;
-}
 
 /* 
 
@@ -442,6 +439,10 @@ footer {
     margin-right: 40px;
 }
 
+.social-links__icon:hover {
+    background-color: #ec9a8e; /* ホバー時の背景色 */
+}
+
 
 /* フッター中部 */
 
@@ -488,6 +489,9 @@ footer {
     line-height: 25px;
 }
 
+.footer__nav__item a:hover {
+    color: #ec9a8e; /* ホバー時の文字色 */
+}
 
 /* コピーライト */
 
@@ -603,7 +607,7 @@ footer {
 }
 
 #back-to-top:hover {
-    background-color: #DFEEFF;
+    background-color: #ec9a8e;
 }
 
 #back-to-top svg:hover , .back-to-top_text:hover {
@@ -661,7 +665,7 @@ footer {
 }
 
 #follow-us__inst:hover {
-    background-color: #DFEEFF;
+    background-color: #ec9a8e;
 }
 
 #follow-us__inst svg:hover , .follow_text:hover {

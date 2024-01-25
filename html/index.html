@@ -43,11 +43,14 @@
 
     <header class="top_header">
         <h1>
-            <img src="../images/デザイン_1/top_mainphoto.png" alt="" width="1200" height="600" >
+            <video poster="../images/topmain.mp4" loop muted autoplay playsinline>
+                <source src="../images/topmain.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </h1>
     </header>
 
-    <section>
+    <section class="toppage_main">
         <div class="home_svg">
             <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.0243432 14.0908C-0.0854839 16.0021 0.173542 17.9176 0.857369 19.6911C1.58264 21.5706 2.75344 23.2615 4.23092 24.6007C5.89905 26.1157 7.93602 26.5755 9.77822 27.7748C11.2433 28.7283 12.4141 30.1607 12.814 31.9173C13.2181 33.6888 12.7539 36.1128 11.1811 37.185C9.98129 38.0029 8.67166 38.1766 7.35166 38.6576C5.41208 39.3654 6.14563 42.0377 8.07692 41.9996C15.9948 41.8428 23.6371 38.5496 27.3402 31.0465C30.8567 23.9226 31.0618 13.667 26.8988 6.76567C22.199 -1.01716 11.1749 -2.24402 4.64536 3.91147C1.93492 6.46901 0.241925 10.2661 0.0243432 14.0908Z" fill="#254298"/>
@@ -64,75 +67,87 @@
                 新しい発見があなたを待っています
             </p>
         </div>
-    </section>
     
-    <section>
         <div class="btn__wrapper">
             <ul class="home_btn_wrapper">
                 <li>
-                    <a href="/html/06_about.html" id="aboutButton" class="home_about home_btn">
+                    <a href="../html/06_about/index.html" id="aboutButton" class="home_about home_btn">
                         About
                     </a>
                 </li>
                 <li>
-                    <a href="/html/04_dive.html" id="diveButton" class="home_dive home_btn">
+                    <a href="../html/04_dive/index.html" id="diveButton" class="home_dive home_btn">
                         DIVE
                     </a>
                 </li>
                 <li>
-                    <a href="/html/02_bar.html" id="barButton" class="home_bar home_btn">
+                    <a href="../html/02_bar/index.html" id="barButton" class="home_bar home_btn">
                         Bar
                     </a>
                 </li>
                 <li>
-                    <a href="/html/05_library.html" id="libraryButton" class="home_library home_btn">
+                    <a href="../html/05_library/index.html" id="libraryButton" class="home_library home_btn">
                         マガユラ図鑑
                     </a>
                 </li>
                 <li>
-                    <a href="/html/03_event.html" id="eventButton" class="home_event home_btn">
+                    <a href="../html/03_event/index.html" id="eventButton" class="home_event home_btn">
                         Event
                     </a>
                 </li>
             </ul>
     
-            <div class="hover__text">
-                <div id="aboutText" style="display:none;">
-                    <p>
-                        営業時間・住所
-                    </p>
+            <div class="hover__text__wrapper">
+                <div class="hover__text">
+                    <div id="aboutText" style="display:none;">
+                        <div class="hover__textitem__wrapper">
+                            <p>
+                                営業時間・住所 <br>
+                                営業時間・住所 <br>
+                                営業時間・住所 
+                            </p>
+                        </div> 
+                    </div>
                 </div>
-            </div>
-            <div class="hover__text">
-                <div id="diveText" style="display:none;">
-                    <p>
-                        グループ・個展プロジェクト <br>
-                    </p>
+                <div class="hover__text">
+                    <div id="diveText" style="display:none;">
+                        <div class="hover__textitem__wrapper">
+                            <p>
+                                グループ・個展プロジェクト
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="hover__text">
-                <div id="barText" style="display:none;">
-                    <p>
-                        個性的なスタッフと素敵なアートを <br>
-                        楽しみながら食事ができる <br>
-                        Bar Magayura
-                    </p>
+                <div class="hover__text">
+                    <div id="barText" style="display:none;">
+                        <div class="hover__textitem__wrapper">
+                            <p>
+                                個性的なスタッフと素敵なアートを <br>
+                                楽しみながら食事ができる <br>
+                                Bar Magayura        
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="hover__text">
-                <div id="libraryText" style="display:none;">
-                    <p>
-                        新しい世界を発見してみませんか？ <br>
-                        まだみたことのないアーティストに出会えるかも
-                    </p>
+                <div class="hover__text">
+                    <div id="libraryText" style="display:none;">
+                        <div class="hover__textitem__wrapper">
+                            <p>
+                                新しい世界を発見してみませんか？ <br>
+                                まだみたことのないアーティストに出会えるかも        
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="hover__text">
-                <div id="eventText" style="display:none;">
-                    <p>
-                        自分好みのイベントに参加することも <br>
-                        自分でイベントを開催することもできます。 <br>
-                    </p>
+                <div class="hover__text">
+                    <div id="eventText" style="display:none;">
+                        <div class="hover__textitem__wrapper">
+                            <p>
+                                自分好みのイベントに参加することも <br>
+                                自分でイベントを開催することもできます。 <br>        
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -157,7 +172,7 @@
 
             <!-- inst -->
             <div class="social-links__icon">
-                <a href="https://www.instagram.com/magayura_noda/?img_index=1">
+                <a href="https://www.instagram.com/magayura_noda/">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21.2124 0.104906C22.8084 0.180206 23.8983 0.434906 24.8511 0.809306C25.8372 1.19361 26.673 1.70931 27.5046 2.54391C28.3362 3.37851 28.8483 4.21491 29.2299 5.20251C29.5992 6.15741 29.8494 7.24821 29.9199 8.84511C29.9904 10.442 30.006 10.9553 29.9982 15.0287C29.9904 19.1021 29.9724 19.6127 29.895 21.2129C29.8188 22.8086 29.565 23.8982 29.1906 24.8513C28.8057 25.8374 28.2906 26.6729 27.4557 27.5048C26.6208 28.3367 25.785 28.8476 24.795 29.2298C23.841 29.5985 22.7499 29.8499 21.1533 29.9198C19.5567 29.9897 19.0428 30.0059 14.9706 29.9981C10.8984 29.9903 10.3857 29.9723 8.78577 29.8964C7.18587 29.8205 6.10197 29.5649 5.14857 29.1923C4.16248 28.8065 3.32637 28.2923 2.49508 27.4571C1.66377 26.6219 1.15198 25.7849 0.770676 24.7967C0.401075 23.8427 0.149975 22.7516 0.0806751 21.1562C0.0107746 19.5551 -0.00572395 19.0439 0.0020752 14.9711C0.00987434 10.8983 0.0281734 10.3877 0.104074 8.78811C0.179974 7.18851 0.434074 6.10221 0.808176 5.14851C1.19368 4.16241 1.70818 3.32751 2.54278 2.49501C3.37737 1.66251 4.21498 1.15101 5.20288 0.770607C6.15747 0.401306 7.24798 0.149606 8.84458 0.0806064C10.4412 0.0116064 10.9551 -0.00609358 15.0288 0.00170642C19.1025 0.00950642 19.6125 0.0269064 21.2124 0.104906ZM21.0372 27.2213C22.4997 27.1577 23.2938 26.9147 23.823 26.7113C24.5238 26.4413 25.023 26.1149 25.5504 25.5926C26.0778 25.0703 26.4018 24.5693 26.6754 23.87C26.8809 23.3408 27.1284 22.5476 27.1968 21.0851C27.2712 19.5044 27.2868 19.0298 27.2955 15.0251C27.3042 11.0204 27.2889 10.5464 27.2196 8.96511C27.1572 7.50381 26.9127 6.70881 26.7096 6.17991C26.4396 5.47821 26.1144 4.97991 25.5909 4.45281C25.0674 3.92571 24.5679 3.60111 23.868 3.32751C23.3394 3.12111 22.5462 2.87571 21.0843 2.80611C19.5024 2.73111 19.0284 2.71611 15.0243 2.70741C11.0202 2.69871 10.545 2.71371 8.96247 2.78331C7.50117 2.84691 6.70588 3.08901 6.17757 3.29331C5.47647 3.56331 4.97758 3.88761 4.45047 4.41201C3.92337 4.93641 3.59848 5.43411 3.32487 6.13551C3.11818 6.66261 2.87278 7.45551 2.80378 8.91831C2.72848 10.5002 2.71138 10.9745 2.70418 14.9783C2.69698 18.9821 2.71107 19.4576 2.78037 21.0383C2.84427 22.5008 3.08668 23.2952 3.29037 23.825C3.56038 24.5255 3.88588 25.025 4.40968 25.5518C4.93348 26.0786 5.43237 26.4032 6.13257 26.6768C6.66057 26.8829 7.45468 27.1289 8.91537 27.1985C10.4973 27.2729 10.9713 27.2885 14.9769 27.2972C18.9825 27.3059 19.455 27.2897 21.0369 27.2213M8.80888 6.98301C8.80828 7.33904 8.70212 7.6869 8.50381 7.98259C8.3055 8.27828 8.02396 8.50852 7.69479 8.64419C7.36563 8.77986 7.00362 8.81487 6.65455 8.74478C6.30549 8.6747 5.98504 8.50267 5.73376 8.25046C5.48246 7.99825 5.31161 7.67718 5.24281 7.32786C5.17401 6.97854 5.21034 6.61666 5.34722 6.28799C5.48409 5.95932 5.71537 5.67862 6.01178 5.4814C6.3082 5.28418 6.65644 5.1793 7.01248 5.18001C7.48976 5.18096 7.94713 5.37144 8.284 5.70955C8.62087 6.04766 8.80967 6.50572 8.80888 6.98301ZM22.7019 15.0149C22.6935 19.2689 19.2387 22.7096 14.9856 22.7015C10.7325 22.6934 7.28938 19.2389 7.29748 14.9849C7.30557 10.7309 10.7613 7.28931 15.015 7.29771C19.2687 7.30611 22.71 10.7615 22.7019 15.0149ZM20.0001 15.0095C20.002 14.0206 19.7107 13.0533 19.1629 12.2299C18.6151 11.4066 17.8355 10.7642 16.9226 10.3839C16.0097 10.0037 15.0045 9.90266 14.0342 10.0937C13.0639 10.2847 12.172 10.7591 11.4714 11.457C10.7707 12.1549 10.2928 13.0449 10.0979 14.0144C9.90305 14.984 10.0001 15.9895 10.3767 16.9039C10.7533 17.8183 11.3927 18.6005 12.2138 19.1515C13.035 19.7026 14.0012 19.9977 14.9901 19.9997C15.6467 20.0011 16.2972 19.8731 16.9044 19.623C17.5116 19.373 18.0635 19.0058 18.5288 18.5424C18.994 18.079 19.3634 17.5285 19.6158 16.9223C19.8683 16.3161 19.9989 15.6662 20.0001 15.0095Z" fill="#fff"/>
                         </svg>                        
@@ -167,178 +182,77 @@
     
 
         <div class="footer__middle__container">
-
-            <!-- 店舗情報 -->
+            <!-- 店舗情報 (contact-info) -->
             <div class="contact-info">
                 <dl>
                     <dt>
                         <h5>
-                            <img src="../images/magayura.png" alt="" width="220" height="61" >
+                            <img src="../images/magayura.png" alt="" width="220" height="61">
                         </h5>
                     </dt>
                     <dd>
                         <address>
-                            <p>
-                                〒553-0006
-                                大阪市福島区吉野3丁目7-7 富岡ビル2/3F
-                            </p>
-                            <a href="tel:0661804191">
-                                TEL:06-6180-4191
-                            </a>
+                            <p>〒553-0006 大阪市福島区吉野3丁目7-7 富岡ビル2/3F</p>
+                            <a href="tel:0661804191">TEL:06-6180-4191</a>
                         </address>
                     </dd>
                 </dl>
             </div>
-
-            <!-- サイトマップ -->
+        
+            <!-- サイトマップ (footer__nav__container) -->
             <div class="footer__nav__container">
-
                 <!-- Bar -->
-                <div class="footer__nav__item">
-                    <h6>
-                        Bar
-                    </h6>
+                <div class="footer__nav__item footer__nav__bar">
+                    <h6>Bar</h6>
                     <ul>
-                        <li>
-                            <a href="#menu">
-                                メニュー
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#consignment">
-                                展示・委託販売
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#shift">
-                                今月のシフト
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#goods">
-                                オリジナルグッズ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#gallery">
-                                ギャラリー
-                            </a>
-                        </li>
+                        <li><a href="../html/02_bar/index.html#menu">おすすめメニュー</a></li>
+                        <li><a href="../html/02_bar/index.html#consignment">展示・委託販売</a></li>
+                        <li><a href="../html/02_bar/#shift">今月のシフト</a></li>
+                        <li><a href="../html/02_bar/index.html#goods">オリジナルグッズ</a></li>
+                        <li><a href="../html/02_bar/index.html#gallery">ギャラリー</a></li>
                     </ul>
                 </div>
-
+        
                 <!-- Event -->
-                <div class="footer__nav__item">
-                    <h6>
-                        Event
-                    </h6>
+                <div class="footer__nav__item footer__nav__event">
+                    <h6>Event</h6>
                     <ul>
-
-                        <!-- 今月のイベント -->
-                        <li>
-                            <a href="03_event.html#now_event">
-                                今月のイベント
-                            </a>
-                        </li>
-
-                        <!-- 過去のイベント -->
-                        <li>
-                            <a href="03_event.html#was_event">
-                                過去のイベント
-                            </a>
-                        </li>
-
-                        <!-- レンタルスペース -->
-                        <li>
-                            <a href="03_event.html#rentalspace">
-                                レンタルスペース
-                            </a>
-                        </li>
-
-                        <!-- よくある質問 -->
-                        <li>
-                            <a href="03_event.html#question">
-                                よくある質問
-                            </a>
-                        </li>
+                        <li><a href="../html/03_event/index.html#now_event">今月のイベント</a></li>
+                        <li><a href="../html/03_event/index.html#was_event">過去のイベント</a></li>
+                        <li><a href="../html/03_event/#rental">レンタルスペース</a></li>
+                        <li><a href="../html/03_event/index.html#faq">よくある質問</a></li>
                     </ul>
                 </div>
-
+        
                 <!-- DIVE -->
-                <div class="footer__nav__item">
-                    <h6>
-                        DIVE
-                    </h6>
+                <div class="footer__nav__item footer__nav__dive">
+                    <h6>DIVE</h6>
                     <ul>
-                        
-                        <!-- アートパークDIVE -->
-                        <li>
-                            <a href="04_dive.html#dive">
-                                Art Park.DIVE
-                            </a>
-                        </li>
-
-                        <!-- アーカイブ -->
-                        <li>
-                            <a href="04_dive.html#archives">
-                                アーカイブ
-                            </a>
-                        </li>
+                        <li><a href="../html/04_dive/index.html#dive">Art Park.DIVE</a></li>
+                        <li><a href="../html/04_dive/index.html#archives">アーカイブ</a></li>
                     </ul>
                 </div>
-
+        
                 <!-- マガユラ図鑑 -->
-                <div class="footer__nav__item">
-                    <h6>
-                        マガユラ図鑑
-                    </h6>
-                    
+                <div class="footer__nav__item footer__nav__library">
+                    <h6>マガユラ図鑑</h6>
                     <ul>
-                        
-                        <!-- マガユラ図鑑 -->
-                        <li>
-                            <a href="05_library.html#artist">
-                                マガユラ図鑑
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
-
-                <!-- about -->
-                <div class="footer__nav__item">
-                    <h6>
-                        About
-                    </h6>
-                    
-                    <ul>
-
-                        <!-- 店舗情報 -->
-                        <li>
-                            <a href="06_about.html#information">
-                                店舗情報
-                            </a>
-                        </li>
-
-                        <!-- アクセス -->
-                        <li>
-                            <a href="06_about.html#access">
-                                アクセス
-                            </a>
-                        </li>
-
-                        <!-- お問い合わせ -->
-                        <li>
-                            <a href="06_about.html#inquiry">
-                                お問い合わせ
-                            </a>
-                        </li>
-
+                        <li><a href="../html/05_library/#artist">マガユラ図鑑</a></li>
                     </ul>
                 </div>
-
+        
+                <!-- About -->
+                <div class="footer__nav__item footer__nav__about">
+                    <h6>About</h6>
+                    <ul>
+                        <li><a href="../html/06_about/index.html#information">店舗情報</a></li>
+                        <li><a href="../html/06_about/index.html#access">アクセス</a></li>
+                        <li><a href="../html/06_about/index.html#inquiry">お問い合わせ</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
+        
         
         <!-- コピーライト -->
             <div class="copyright">

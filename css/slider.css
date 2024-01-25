@@ -40,7 +40,7 @@
 .slick-prev:before{
     width: 50px;  /* 画像の幅 */
     height: 50px; /* 画像の高さ */
-    background: url(../images/next.png)!important;
+    background: url(../images/event_rental/next.png)!important;
     background-size: contain!important;
     transform: rotate(90deg) translateY(-10px) translateX(10px); /* この行を追加 */
     display: block; /* 追加: この行がないと、contentが空の場合に表示されないことがあります */
@@ -49,7 +49,7 @@
 .slick-next:before{
     width: 50px;  /* 画像の幅 */
     height: 50px; /* 画像の高さ */
-    background: url(../images/back.png)!important;
+    background: url(../images/event_rental/back.png)!important;
     background-size: contain!important;
     transform: rotate(90deg) translateY(60px) translateX(10px); /* この行を追加 */
     display: block; /* 追加: この行がないと、contentが空の場合に表示されないことがあります */

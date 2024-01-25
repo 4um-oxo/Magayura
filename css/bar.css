@@ -209,6 +209,19 @@ h3 {
     color: #DA7D7D;
 }
 
+
+
+/* 
+
+    バックグラウンドimageのSVG
+
+*/
+
+/* 
+.heading__odd {
+    background-image: ;
+} */
+
 /* 
 
 --------------ここからメニュー----------
@@ -302,8 +315,7 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
 
 /* view more のcss */
 
-/* 019 */
-.button019 a {
+.button__wrapper a {
     background: #526AB2;
     border-radius: 30px;
     position: relative;
@@ -322,7 +334,7 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
     font-size: 1.6rem;
 }
 
-.button019 a:after {
+.button__wrapper a:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -338,12 +350,12 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
     transform: translateY(-50%) rotate(45deg);
 }
 
-.button019 a:hover {
-    background: #6bb6ff;
+.button__wrapper a:hover {
+    background: #7a91d7;
     color: #FFF;
 }
 
-.button019 a:hover:after {
+.button__wrapper a:hover:after {
     right: 15px; /* ホバー時に矢印を移動 */
 }
 
@@ -383,11 +395,11 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
     margin: 0 auto;
 }
 
-.Img260_even > img {
+.Img250_even > img {
     border-radius: 5px;
 }
 
-.Img260_even {
+.Img250_even {
     background-color: #DA7D7D;
     border-radius: 10px;
     padding: 10px;
@@ -399,6 +411,7 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
 /* 
     今月のシフト
 */
+
 
 .text {
     text-align: center;
@@ -418,23 +431,8 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
 
-    .shift_Img img {
-        width: 400px;
-        height: auto;
-        padding: 10px;
-    }
-    
-    .menberImg_wrapper img {
-        width: 112px;
-        height: auto;
-    }
-    
-    .menber_item {
-        margin: 5px;
-    }
-}
+
 
 
 /* メンバーリスト */
@@ -443,18 +441,23 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 700px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.menber_item {
+    height: 315px;
+    position: relative;
 }
 
 .menber_item img {
     border-radius: 5px;
 }
 
-.menber_item > .menberImg_wrapper {
+.menberImg_wrapper {
     background-color: #FFF3E7;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 10px;
 }
 
@@ -463,13 +466,40 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
     margin-bottom: 20px;
 }
 
-.menu_item > p > span {
-    float: right;
+
+
+
+
+/* スタッフのSNSのスタイル調整 */
+.staff_sns {
+    position: relative;
+    width: 200px;
+    height: 45px;
+    display: flex;
+    justify-content: flex-end; /* 右寄せに変更 */
+    z-index: 2;
+    
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-.menu_item {
-    margin-bottom: 30px;
+.staff_sns__icon {
+    background-color: #DA7D7D;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* 円形にする */
+    display: flex; /* SVGを中央に配置するための設定 */
+    justify-content: center;
+    align-items: center;
 }
+
+.staff_sns__icon-wrapper:not(:last-child) {
+    margin-right: 5px; /* 最後の要素以外に右側の余白を追加 */
+}
+
+
+
 
 
 /* 
@@ -522,11 +552,11 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
     margin: 0 auto;
 }
 
-.Img260_odd > img {
+.Img250_odd > img {
     border-radius: 5px;
 }
 
-.Img260_odd {
+.Img250_odd {
     background-color: #FFF3E7;
     border-radius: 10px;
     padding: 10px;
@@ -538,8 +568,12 @@ flex-direction: column; /* スマホでは要素を縦に並べる */
 
 /* お問い合わせ */
 
+
 #inquiry {
     text-align: center;
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .inquiry__banner__wrapper {

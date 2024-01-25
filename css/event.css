@@ -203,11 +203,11 @@ h3 {
 
   /* 色 */
 
-#schedule , #shift , #gallery {
+#schedule , #rental  {
     color: #D6E5FF;
 }
 
-#consignment , #goods {
+#past-events , #faq {
     color: #526AB2;
 }
 
@@ -215,41 +215,52 @@ h3 {
 
 /* view more のcss */
 
-.view-more {
-    background-color: #E16675; /* ボタンの背景色を設定 */
-    border-radius: 50px; /* ボタンの角を丸くする */
-    color: #ff8000; /* ボタンの文字色を白にする */
-    padding: 10px 60px; /* ボタンの内側の余白を設定 */
-    width: 210px;
-    font-size: 1.6rem; /* フォントサイズを設定 */
-    cursor: pointer; /* マウスカーソルをポインタにする */
-    transition: background-color 0.3s ease; /* 背景色の変更にアニメーションを設定 */
+
+/* view more のcss */
+
+.button__wrapper a {
+    background: #E16675;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center; /* テキストを中央に配置 */
+    align-items: center;
+    margin: 0 auto;
+    width: 210px; /* 幅を210pxに設定 */
+    height: 50px; /* 高さを50pxに設定 */
+    padding: 10px 25px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    text-decoration: none; /* リンクの下線を除去 */
+
+    font-size: 1.6rem;
 }
 
-.view-more:hover {
-background-color: #ff8000; /* ホバー時の背景色を設定 */
-color: #E16675;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-
-.business-hours-container {
-    padding: 10px;
-}
-
-}
-
-.business-hours, .view-more {
-    width: auto; /* 幅を自動調整にする */
-    margin: 10px auto; /* 自動的に中央揃えにする */
-}
-
-.button_wrapper {
+.button__wrapper a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px; /* ボタンの右端からの距離を調整 */
     display: flex;
     justify-content: center;
+    align-items: center;
+    transition: right 0.3s;
+    width: 6px;
+    height: 6px;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+    transform: translateY(-50%) rotate(45deg);
 }
 
+.button__wrapper a:hover {
+    background: #f697a2;
+    color: #FFF;
+}
+
+.button__wrapper a:hover:after {
+    right: 15px; /* ホバー時に矢印を移動 */
+}
 
 
 
@@ -330,7 +341,7 @@ color: #E16675;
 
 
 /* 
-    オリジナルグッズ
+    イベントリスト
 */
 
 
@@ -645,7 +656,7 @@ footer {
 }
 
 #back-to-top:hover {
-    background-color: #DFEEFF;
+    background-color: #f697a2;
 }
 
 #back-to-top svg:hover , span:hover {

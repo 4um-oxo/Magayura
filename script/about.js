@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    // 各ボタンとテキストのペアを定義
     var pairs = {
         'aboutButton': 'aboutText',
         'diveButton': 'diveText',
@@ -8,14 +7,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         'eventButton': 'eventText'
     };
 
-    // ペアに対してイベントリスナーを設定
     for (var buttonId in pairs) {
         let textId = pairs[buttonId];
         document.getElementById(buttonId).addEventListener('mouseover', function() {
-            document.getElementById(textId).style.display = 'block';
+            let element = document.getElementById(textId);
+            element.style.display = 'block';
+            setTimeout(() => { element.style.opacity = 1; element.style.transform = 'translateY(0)'; }, 10);
         });
         document.getElementById(buttonId).addEventListener('mouseout', function() {
-            document.getElementById(textId).style.display = 'none';
+            let element = document.getElementById(textId);
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(-20px)';
+            setTimeout(() => { element.style.display = 'none'; }, 150); // アニメーション終了後に非表示
         });
     }
 });

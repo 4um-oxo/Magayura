@@ -7,15 +7,37 @@ html {
 
 
 
+
+
+
 .top_header h1 {
     width: 100%; /* 親要素の幅を100%に設定 */
     margin: 0 0 50px 0; /* 余白を取り除く */
 }
 
-.top_header h1 img {
+.top_header h1 video {
     width: 100%; /* 画像の幅を100%に設定 */
     height: auto; /* 画像の高さを自動調整 */
 }
+
+.toppage_main {
+    height: auto;
+    overflow: hidden;
+}
+
+
+
+/* 
+
+    ボタンのところの背景画像
+
+*/
+
+.toppage_main {
+    background-image: url();
+}
+
+
 
 
 /* テキスト */
@@ -49,7 +71,8 @@ html {
 
 .home_btn_wrapper {
     max-width: 1000px;
-    margin: 0 auto 50px;
+    height: 200px;
+    margin: 0 auto 20px;
     display: flex;
     justify-content: space-around;
 }
@@ -124,6 +147,60 @@ html {
     margin-bottom: 50px;
 }
 
+/* hoverしたらボタンの下に▲が出てくる */
+
+.home_btn_wrapper li {
+    position: relative; /* 三角形を正しく位置付けるために必要 */
+}
+
+.home_btn_wrapper .home_btn:hover::after {
+    content: ''; /* 疑似要素を動作させるために必要 */
+    position: absolute;
+    left: 50%; /* 三角形を中央に配置 */
+    bottom: -50px; /* 三角形をリストアイテムの下に配置 */
+    transform: translateX(-50%); /* 三角形を中央に配置 */
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent; /* サイズを必要に応じて調整 */
+    border-right: 20px solid transparent; /* サイズを必要に応じて調整 */
+}
+
+#aboutButton::after{
+    border-bottom: 20px solid #88ae8c; /* 色とサイズを必要に応じて調整 */
+}
+
+#diveButton::after {
+    border-bottom: 20px solid #f7d17e; /* 色とサイズを必要に応じて調整 */
+}
+
+#barButton::after {
+    border-bottom: 20px solid #e59d9d; /* 色とサイズを必要に応じて調整 */
+}
+
+#libraryButton::after {
+    border-bottom: 20px solid #c486d3; /* 色とサイズを必要に応じて調整 */
+}
+
+#eventButton::after {
+    border-bottom: 20px solid #7685b2; /* 色とサイズを必要に応じて調整 */
+}
+
+
+
+/* 三角形の初期状態 */
+.home_btn_wrapper .home_btn::after {
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* ホバー時の三角形の状態 */
+.home_btn_wrapper .home_btn:hover::after {
+    opacity: 1;
+    /* 透明度と位置の変化にアニメーションを適用 */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
 
 /* 
 
@@ -131,20 +208,89 @@ html {
 
 */
 
+.hover__textitem__wrapper {
+    display: flex;
+    justify-content: center; /* 横方向の中央揃え */
+    align-items: center; /* 縦方向の中央揃え */
+    height: 75px;
+}
 
+
+#aboutText , #diveText , #barText , #libraryText , #eventText {
+    background-color: #D9D9D9;
+    padding: 30px;
+    border-radius: 20px;
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+#aboutText {
+    background-color: #88ae8c;
+    color: #fff;
+    position: absolute;
+    width: 1000px;
+    height: 135px;
+}
+
+#diveText {
+    background-color: #f7d17e;
+    color: #fff;
+    position: absolute;
+    width: 1000px;
+    height: 135px;
+}
+
+#barText{
+    background-color: #e59d9d;
+    color: #fff;
+    position: absolute;
+    width: 1000px;
+    height: 135px;
+}
+
+#libraryText {
+    background-color: #c486d3;
+    color: #fff;
+    position: absolute;
+    width: 1000px;
+    height: 135px;
+}
+
+#eventText {
+    position: absolute;
+    background-color: #7685b2;
+    color: #fff;
+    width: 1000px;
+    height: 135px;
+}
 
 .hover__text {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 50px auto;
     text-align: center;
     font-size: 1.4rem;
-    line-height: 35px;
+    line-height: 25px;
 }
+
+
 
 #hoverTarget {
     /* ホバー対象のスタイル */
     cursor: pointer;
 }
+
+
+/* hoverテキストの位置調整 */
+
+.hover__text__wrapper {
+    height: 135px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
 
 /* footer */
 
@@ -173,9 +319,15 @@ footer {
     height: 60px;
     border-radius: 50%;
     display: flex;
-    justify-content: center; /* 横軸中央揃え */
-    align-items: center; /* 縦軸中央揃え */
+    justify-content: center;
+    align-items: center;
     margin-bottom: 50px;
+    transition: background-color 0.3s; /* 背景色の変化にアニメーションを適用 */
+}
+
+
+.social-links__icon:hover {
+    background-color: #7d9ad9; /* ホバー時の背景色 */
 }
 
 
@@ -235,6 +387,9 @@ footer {
     line-height: 25px;
 }
 
+.footer__nav__item a:hover {
+    color: #7d9ad9; /* ホバー時の文字色 */
+}
 
 /* コピーライト */
 
@@ -257,6 +412,42 @@ footer {
 
 /* フッターのレスポンシブ */
 
+
+/* タブレット用のスタイル (画面幅が601pxから900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    
+    .footer__middle__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info {
+        margin-bottom: 30px;
+    }
+
+
+    .footer__nav__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* 項目間のスペースを均等に */
+    }
+
+    .footer__nav__item {
+        width: calc(50% - 20px); /* 2カラムで表示 */
+        margin-bottom: 20px; /* 下部の余白 */
+    }
+
+    /* 最後のアイテム（About）は中央に配置 */
+    .footer__nav__about {
+        width: 100%;
+        margin-right: 0;
+    }   
+
+    .footer__nav__item:not(:last-child){
+        margin-right: 10px;
+    }
+}
+
 /* スマートフォン用のスタイル (画面幅が600px以下) */
 @media (max-width: 600px) {
     .footer__middle__container {
@@ -269,63 +460,8 @@ footer {
         align-items: center;
     }
 
-    .footer__nav__item:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .social-links__icon {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 30px;
-    }
-}
-
-/* タブレット用のスタイル (画面幅が601pxから900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-    .footer__nav__item:not(:last-child) {
-        margin-right: 30px;
-    }
-
-    .social-links__icon {
-        width: 55px;
-        height: 55px;
-    }
-}
-
-@media (max-width: 600px) {
-    .contact-info address, .footer__nav__item li {
-        font-size: 14px;
-    }
-
-    .footer__nav__item h6 {
-        font-size: 18px;
-    }
-}
-@media (max-width: 768px) {
-    /* .footer__middle__containerの子要素のうち、.contact-infoのみを縦並びにする */
-    .footer__middle__container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* .contact-infoのスタイル調整 */
-    .contact-info {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px; /* 下の要素との間隔 */
-        width: 100%; /* 幅を調整 */
-    }
-
-    /* .footer__nav__containerと.footer__nav__itemは横並びのまま */
-    .footer__nav__container {
-        flex-wrap: wrap; /* 必要に応じて折り返す */
-        justify-content: center; /* 中央揃え */
-    }
-
     .footer__nav__item {
-        margin-right: 10px; /* 項目間の間隔 */
-        margin-bottom: 10px; /* 下の行との間隔 */
+        width: 100%; /* 1カラム表示 */
+        margin-bottom: 20px; /* 下部の余白 */
     }
 }
-
