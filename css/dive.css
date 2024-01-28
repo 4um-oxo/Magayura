@@ -27,6 +27,657 @@ html {
 /* headerの背景 */
 header {
     background-color: #fff;
+    padding: 50px 0;
+}
+
+
+/* ナビゲーションとロゴ周り */
+
+.navlogo_wrapper {
+    /* width: 1000px; */
+    display: flex;
+    justify-content: center;
+}
+
+.navlogo__wrapper {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_wrapper {
+    background-color: #F7C355;
+    color: #fff;
+    font-size: 1.4rem;
+    font-style: bold;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+nav > ul {
+    display: flex;
+    padding: 0 15px 0 15px;
+}
+
+nav > ul > li {
+    padding: 20px 15px;
+}
+
+/* ナビゲーションリンク - アクティブスタイル */
+nav > ul > li.active a {
+    position: relative; /* ポジションを相対的に設定 */
+}
+
+nav > ul > li.active a::after {
+    content: '';
+    position: absolute; /* ポジションを絶対的に設定 */
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* ラインの幅をリンクと同じに設定 */
+    height: 5px; /* ラインの高さを設定 */
+    background-color: #E95039; /* ラインの背景色を設定 */
+    border-radius: 10px 10px 0 0; /* 上半分に角丸を設定 */
+}
+
+/* ハンバーガーメニューアイコンのスタイル */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* スマートフォンビューでのナビゲーションとハンバーガーメニューの表示設定 */
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+        padding: 20px;
+    }
+
+    nav > ul {
+        display: none;
+    }
+
+    .nav-active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ハンバーガーメニューがアクティブなときのアイコンの変化 */
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navlogo__wrapper {
+        margin: 0 30px;
+    }    
+}
+    
+
+
+/* title */
+
+.page_title_box {
+    text-align: center;
+}
+
+#page_title {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: #E95039;
+}
+
+
+
+
+/* 
+--------------ここからメインコンテンツ-------------
+ */
+
+
+/* 偶数コンテンツの背景 */
+
+.container_even {
+    background-color: #D6E5FF;
+}
+
+/* お問い合わせの背景 */
+#inquiry {
+    background-color: #fff;
+}
+
+/* セクションごとの余白 */
+
+section {
+    padding: 100px 0;
+}
+
+
+/* 各コンテンツタイトル */
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+
+/* 
+    タイトル横ライン
+*/
+
+.heading__odd , .heading__even {
+    align-items: center; /* 横線を上下中央 */
+    display: flex; /* 文字と横線を横並び */
+    justify-content: center; /* 文字を中央寄せ */
+}
+
+.heading__odd::before, .heading__odd::after {
+    background-color: #fff; /* 横線の色 */
+    content: "";
+    height: 3px; /* 横線の高さ */
+    width: 300px;
+}
+
+.heading__even::before, .heading__even::after {
+    background-color: #F7C355; /* 横線の色 */
+    content: "";
+    height: 3px; /* 横線の高さ */
+    width: 300px;
+}
+
+.heading__odd::before, .heading__even::before {
+    margin-right: 15px; /* 文字との余白 */
+}
+.heading__odd::after, .heading__even::after {
+    margin-left: 15px; /* 文字との余白 */
+}
+
+
+  /* 色 */
+
+#archives {
+    color: #fff;
+}
+
+
+/* 
+
+/* view more のcss */
+
+.view-more {
+    background-color: #F7C355; /* ボタンの背景色を設定 */
+    border-radius: 50px; /* ボタンの角を丸くする */
+    color: #ff8000; /* ボタンの文字色を白にする */
+    padding: 10px 60px; /* ボタンの内側の余白を設定 */
+    width: 210px;
+    font-size: 1.6rem; /* フォントサイズを設定 */
+    cursor: pointer; /* マウスカーソルをポインタにする */
+    transition: background-color 0.3s ease; /* 背景色の変更にアニメーションを設定 */
+}
+
+.view-more:hover {
+background-color: #ff8000; /* ホバー時の背景色を設定 */
+color: #F7C355;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+
+.business-hours-container {
+    padding: 10px;
+}
+
+}
+
+.business-hours, .view-more {
+    width: auto; /* 幅を自動調整にする */
+    margin: 10px auto; /* 自動的に中央揃えにする */
+}
+
+.button_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* 
+
+    アーカイブのcss
+
+*/
+
+/* content全体の並び */
+
+.archive_bigbox {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.archive__container {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.archive__conrent {
+    margin-bottom: 50px;
+}
+
+/* 画像とh4のcss */
+
+.archive_titleImg-box {
+    width: 280px;
+    height: 320px;
+    position: relative;
+}
+
+.archive__content-Title {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    display: inline-block;
+    background-color: transparent; /* 背景色を透明に設定 */
+    color: #fff;
+    font-size: 25px;
+
+    /* 画像より上に持ってくるため */
+    position: relative;
+    z-index: 1;
+}
+
+.archive__content-Title span {
+    background-color: #E95039; /* 背景色を赤に設定 */
+    padding: 0 10px; /* パディングを左右に適用 */
+}
+
+
+
+.archive__Img-box {
+    background-color: #FBF9EC;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    /* ポジション */
+    position: absolute;
+    top: 10px;
+}
+
+.archive__Img-box img {
+    border-radius: 5px;
+}
+
+
+/* イベントタイトル系のcss */
+
+
+.archive__event-title {
+    font-size: 20px;
+    color: #E95039;
+    
+}
+
+.archive__event-openTime {
+    font-size: 16px;
+}
+
+
+
+
+
+/* お問い合わせ */
+
+#inquiry {
+    text-align: center;
+}
+
+.inquiry__banner__wrapper {
+    margin-bottom: 50px;
+}
+
+.inquiry__banner__wrapper p {
+    margin-top: 20px;
+    font-size: 1.4rem;
+}
+
+.inquiry__text {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.inquiry__text p {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/* 
+    お問い合わせ横ライン
+*/
+
+.inquiry__title {
+    display: flex; /* フレックスコンテナにする */
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #254298;
+}
+
+.inquiry__title::before,
+.inquiry__title::after {
+    content: ""; /* 必須 */
+    background-color: #254298; /* 横線の色 */
+    height: 3px; /* 横線の厚さ */
+    width: 300px;
+    margin: 0 15px; /* `h3` 要素との余白 */
+}
+
+
+
+/* footer */
+
+/* フッター全体のスタイル */
+
+footer {
+    background-color: #F0F0F0;
+    color: #E95039;
+    padding-top: 50px;
+}
+
+
+/* SNSアイコン */
+
+.social-links {
+    text-align: center; /* アイコンを中央揃えに */
+    margin-bottom: 20px; /* 下部の余白 */
+    display: flex;
+    justify-content: center;
+}
+
+
+.social-links__icon {
+    background-color: #E95039;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* 横軸中央揃え */
+    align-items: center; /* 縦軸中央揃え */
+    margin-bottom: 50px;
+}
+
+
+.social-links a {
+    display: inline-flex; /* リンクをフレックスアイテムとして表示 */
+    align-items: center; /* 縦軸中央揃え */
+    justify-content: center; /* 横軸中央揃え */
+}
+
+.social-links__icon:first-child {
+    margin-right: 40px;
+}
+
+.social-links__icon:hover {
+    background-color: #ec9a8e; /* ホバー時の背景色 */
+}
+
+
+/* フッター中部 */
+
+/* フッター中部の横並び */
+.footer__middle__container {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* フッターの会社概要 */
+.contact-info address {
+    font-size: 10px;
+    font-weight: 500;
+
+}
+
+.contact-info dt {
+    margin-bottom: 10px;
+}
+
+
+/* フッターのナビ */
+
+/* フッターのナビを各種横並び */
+
+.footer__nav__container {
+    display: flex;
+}
+
+.footer__nav__item:not(:last-child){
+    margin-right: 50px;
+}
+
+.footer__nav__item h6 {
+    font-size: 20px;
+}
+
+.footer__nav__item li {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.footer__nav__item a:hover {
+    color: #ec9a8e; /* ホバー時の文字色 */
+}
+
+/* コピーライト */
+
+.copyright {
+    background-color: #E95039;
+    margin-top: 50px;
+    padding: 10px;
+    width: 100%; /* これを追加 */
+    max-width: 100%; /* これが既にある場合、追加する必要はありません */
+    text-align: center; /* 親要素も中央揃えに */
+}
+
+/* 中央に配置されたテキスト */
+.copyright small {
+    color: #fff;
+    font-size: 14px;
+    text-align: center; /* これが既にある場合、追加する必要はありません */
+}
+
+
+/* フッターのレスポンシブ */
+
+/* スマートフォン用のスタイル (画面幅が600px以下) */
+@media (max-width: 600px) {
+    .footer__middle__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__nav__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__nav__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .social-links__icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+/* タブレット用のスタイル (画面幅が601pxから900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .footer__nav__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .social-links__icon {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-info address, .footer__nav__item li {
+        font-size: 14px;
+    }
+
+    .footer__nav__item h6 {
+        font-size: 18px;
+    }
+}
+@media (max-width: 768px) {
+    /* .footer__middle__containerの子要素のうち、.contact-infoのみを縦並びにする */
+    .footer__middle__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .contact-infoのスタイル調整 */
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* 下の要素との間隔 */
+        width: 100%; /* 幅を調整 */
+    }
+
+    /* .footer__nav__containerと.footer__nav__itemは横並びのまま */
+    .footer__nav__container {
+        flex-wrap: wrap; /* 必要に応じて折り返す */
+        justify-content: center; /* 中央揃え */
+    }
+
+    .footer__nav__item {
+        margin-right: 10px; /* 項目間の間隔 */
+        margin-bottom: 10px; /* 下の行との間隔 */
+    }
+}
+
+
+
+
+/* 
+    TOPに戻るボタン
+*/
+
+/***追従するトップへ戻るボタン***/
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    text-align: center; /* テキストとSVGを中央揃えにする */
+    background-color: #E95039; /* 背景色を設定 */
+    border-radius: 50%; /* 正円の形にする */
+    padding: 15px 20px; /* 上下に9px、左右に17pxの余白を設定 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
+}
+
+#back-to-top:hover {
+    background-color: #ec9a8e;
+}
+
+#back-to-top svg:hover , .back-to-top_text:hover {
+    color: #F7C355;
+}
+
+    
+    #back-to-top svg {
+    /* SVGのサイズや余白の調整 */
+    width: 30px; /* SVGの幅を設定 */
+    height: 20px; /* SVGの高さを設定 */
+    margin-bottom: 5px; /* SVGとテキストの間の余白 */
+    }
+    
+    #back-to-top .back-to-top_text {
+    display: block; /* ブロック要素として表示 */
+    color: white; /* 文字色を白に */
+    font-size: 14px; /* 文字サイズを適宜調整 */
+    font-weight: bold; /* 文字を太字に */
+    }
+    
+    /* 画面の小さいデバイスで見たときにボタンが大きすぎないように調整する */
+    @media (max-width: 600px) {
+    #back-to-top {
+    padding: 20px; /* 小さいデバイスでは全体的に余白を減らす */
+    bottom: 10px;
+    right: 10px;
+    }
+    #back-to-top svg {
+    width: 24px; /* SVGの幅を小さくする */
+    height: 16px; /* SVGの高さを小さくする */
+    }
+    #back-to-top .back-to-top_text {
+    font-size: 10px; /* テキストのサイズを小さくする */
+    }
+    }
+*/
+
+
+
+
+
+/* 
+
+    ポジションでアブソリュートをかけたい場合、
+    親要素の高さと横幅を指定しないといけない
+
+*/
+
+body {
+    background-color: #F7C355;
+}
+
+html {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+
+/* headerのcss */
+
+.container_odd {
+    background-color: #F7C355; 
+    /* 全体の背景色を #F7C355 に設定 */
+}
+
+/* headerの背景 */
+header {
+    background-color: #fff;
     padding: 50px 0px;
 }
 
@@ -644,63 +1295,254 @@ footer {
     font-size: 10px; /* テキストのサイズを小さくする */
     }
     }
-/***トップへ戻るボタンここまで***/
-
-
-/* 
-    インスタフォローしてねのボタン
 */
 
-/***追従するトップへ戻るボタン***/
+
+
 #follow-us__inst {
+    position: relative;
+}
+
+.follow-us__inst_wrapper {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    cursor: pointer;
-    text-align: center; /* テキストとSVGを中央揃えにする */
-    background-color: #E95039; /* 背景色を設定 */
-    border-radius: 50%; /* 正円の形にする */
-    padding: 40px; /* 上下に9px、左右に17pxの余白を設定 */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
+    width: 145px;
+    height: 145px;
+    background-color: #E95039;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#follow-us__inst:hover {
+.follow-us__inst_wrapper svg {
+    margin-bottom: 10px; /* SVGとテキストの間の間隔を調整 */
+}
+
+.follow_text {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+#follow-us__inst a svg {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+#follow-us__inst a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%; /* aタグを幅100%に設定 */
+    height: 100%; /* aタグを高さ100%に設定 */
+    text-decoration: none; /* テキストの下線を削除 */
+    color: white; /* テキストの色を白に設定 */
+}
+
+.follow-us__inst_wrapper:hover {
     background-color: #ec9a8e;
 }
 
-#follow-us__inst svg:hover , .follow_text:hover {
-    color: #F7C355;
+
+.cp_bigbox {
+    background-color: #FBF9EC;
 }
 
-    
-#follow-us__inst svg {
-    /* SVGのサイズや余白の調整 */
-    width: 50px; /* SVGの幅を設定 */
-    height: 50px; /* SVGの高さを設定 */
-    margin-bottom: 5px; /* SVGとテキストの間の余白 */
+.cp_container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+
+.cp_wrapper {
+    position: relative;
+    margin: 0 auto;
+}
+
+.cp_loading05 {
+    position: relative;
+    width: 500px; /* 大きな円のサイズ */
+    height: 500px;
+    background: radial-gradient(50% 50% at 50% 50%, #FFB800 80%, rgba(255, 184, 0, 0.00) 100%);
+    border-radius: 50%;
+    margin: 100px auto; /* 画面の中央に配置 */
+}
+
+.cp_text {
+    width: 500px;
+    height: 500px;
+    font-size: 30px;
+    color: #fff;
+    display: flex; /* Flexboxを使用 */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    text-align: center;
+    line-height: 50px;
+}
+
+.cp_item_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    /* 回転アニメーションを適用 */
+    animation: counterRotate 12s linear infinite;
+  }
+  
+  @keyframes counterRotate {
+    0% {
+      transform: rotate(0deg);
     }
-    
-    #follow-us__inst .follow_text {
-    display: block; /* ブロック要素として表示 */
-    color: white; /* 文字色を白に */
-    font-size: 1.6rem; /* 文字サイズを適宜調整 */
-    font-weight: bold; /* 文字を太字に */
-    padding-bottom: 10px;
+    100% {
+      transform: rotate(-360deg);
     }
-    
-    /* 画面の小さいデバイスで見たときにボタンが大きすぎないように調整する */
-    @media (max-width: 600px) {
-    #follow-us__inst {
-    padding: 20px; /* 小さいデバイスでは全体的に余白を減らす */
-    bottom: 10px;
-    right: 10px;
+  }
+
+  .cp_holder1 .cp_item_text {
+    animation-delay: -4s; /* 同じアニメーション遅延を設定 */
+  }
+  .cp_holder2 .cp_item_text {
+    animation-delay: -8s;
+  }
+  .cp_holder3 .cp_item_text {
+    animation-delay: -12s;
+  }
+  
+
+.cp_holder {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200px; /* 小さい円のサイズ */
+    height: 200px;
+    /* 大きな円の外周にかかるように調整 */
+    transform-origin: 50% calc(250px + 100px); /* 大きな円の半径 + 小さい円の半径の半分 */
+    margin-top: -100px; /* 小さい円の高さの半分 */
+    margin-left: -100px; /* 小さい円の幅の半分 */
+    animation: loading05 12s linear infinite; /* アニメーションを適用 */
+}
+
+.cp_holder1 {
+    animation-delay: -4s; /* アニメーション遅延を設定 */
+}
+.cp_holder2 {
+    animation-delay: -8s; /* 各円が異なるタイミングで回転するように */
+}
+.cp_holder3 {
+    animation-delay: -12s;
+}
+
+.cp_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(50% 50% at 50% 50%, #E95039 80%, rgba(255, 184, 0, 0.00) 100%);
+    border-radius: 50%;}
+
+@keyframes loading05 {
+    0% {
+        transform: rotate(0deg);
     }
-    #follow-us__inst svg {
-    width: 24px; /* SVGの幅を小さくする */
-    height: 16px; /* SVGの高さを小さくする */
+    100% {
+        transform: rotate(360deg);
     }
-    #follow-us__inst .follow_text {
-    font-size: 10px; /* テキストのサイズを小さくする */
-    }
-    }
-/***トップへ戻るボタンここまで***/
+}
+
+
+.cp__coment__text {
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+
+.cp__coment__text p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 52px;
+    padding-bottom: 100px;
+}
+
+
+
+/* ふわっとてきすと */
+
+.blur{
+	animation-name:blurAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes blurAnime{
+  from {
+	filter: blur(10px);
+	transform: scale(1.02);
+	opacity: 0;
+  }
+
+  to {
+	filter: blur(0);
+	transform: scale(1);
+	opacity: 1;
+  }
+}
+ 
+.blurTrigger{
+    opacity: 0;
+}
+
+#DIVE_title {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+  
+  .title_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height : 100vh; */
+  }
+  
+  /* 特殊文字のスタイル */
+  #DIVE_title .special {∏
+    color: #EA513A;
+    font-family: 'Rochester', sans-serif;
+    font-size: 270px;
+    line-height: 200px;
+  }
+  
+  
+  h2 .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    transform: translateZ(0); /* 古いブラウザ向け */
+    will-change: transform;
+  }
+  
+  #DIVE_title br {
+    margin-bottom: -20px; /* 改行タグの下部マージンを調整 */
+  }

@@ -10,14 +10,15 @@ html {
 
 
 
+
 .top_header h1 {
     width: 100%; /* 親要素の幅を100%に設定 */
     margin: 0 0 50px 0; /* 余白を取り除く */
 }
 
 .top_header h1 video {
-    width: 100%; /* 画像の幅を100%に設定 */
-    height: auto; /* 画像の高さを自動調整 */
+    width: 100%;
+    height: auto;
 }
 
 .toppage_main {
@@ -89,6 +90,10 @@ html {
     text-align: center;
     transition: background-color 0.3s, width 0.3s, height 0.3s;
 }
+
+
+
+
 
 /* 各ボタンの特定の背景色 */
 .home_about {
@@ -465,3 +470,56 @@ footer {
         margin-bottom: 20px; /* 下部の余白 */
     }
 }
+
+
+@media (max-width: 768px) {
+    .home_btn_wrapper {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .home_btn {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+        width: 45%; /* スマートフォンではボタンを大きく表示 */
+    }
+}
+
+@media (max-width: 768px) {
+    .hover__text__wrapper {
+        width: 100%; /* テキストボックスの幅を画面幅に合わせる */
+    }
+
+    .hover__text {
+        font-size: 12px; /* ホバーテキストのサイズを小さく */
+    }
+
+    #aboutText, #diveText, #barText, #libraryText, #eventText {
+        width: 90%; /* ホバーテキストの幅を調整 */
+        margin: 0 auto; /* 中央揃え */
+    }
+}
+
+@media (max-width: 768px) {
+    .home_textbox h2 {
+        font-size: 24px; /* ヘッダーのサイズを小さく */
+    }
+
+    .home_textbox p {
+        font-size: 12px; /* パラグラフのサイズを小さく */
+    }
+}
+
+/* 小さな画面でのボタンサイズの調整 */
+@media (max-width: 768px) {
+    .home_btn {
+        width: 40vw; /* 小さい画面ではボタンを大きくする */
+        height: 40vw; /* 幅と同じ値に設定して正円を保つ */
+    }
+}
+
+
